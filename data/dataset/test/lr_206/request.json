@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "dataset_version": "dataset-v0.1",
+  "case_id": "lr_206",
+  "device_id": "CV-01",
+  "synthetic": true,
+  "window_start": "2026-09-07T11:15:00+08:00",
+  "window_end": "2026-09-07T11:17:00+08:00",
+  "sample_interval_s": 1,
+  "requested_task": "控制柜告警后暂停输送，末段采集连接中断。请说明能够确认的情况，并核对最新状态。",
+  "collection": {
+    "telemetry_complete": false,
+    "events_complete": false,
+    "images_are_video": false,
+    "missing_fields": [
+      "*@2026-09-07T11:16:45+08:00..2026-09-07T11:17:00+08:00"
+    ],
+    "uploaded_state_is_live_authority": false
+  },
+  "input_files": [
+    "device.json",
+    "device_state.json",
+    "data_dictionary.json",
+    "operating_guide.md",
+    "telemetry.csv",
+    "events.jsonl",
+    "images.json"
+  ]
+}

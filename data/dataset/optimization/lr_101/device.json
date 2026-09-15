@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "synthetic": true,
+  "parameter_origin": "authored_demo_profile",
+  "device_id": "CV-01",
+  "device_name": "纸箱输送演示工位",
+  "controller_id": "PLC-01",
+  "conveyor": {
+    "length_m": 2.4,
+    "width_m": 0.5,
+    "nominal_speed_m_s": 0.4
+  },
+  "motor": {
+    "device_id": "M-01",
+    "power_kind": "24V_DC_branch",
+    "nominal_power_w": 90
+  },
+  "power": {
+    "battery_powered": false,
+    "nominal_drive_voltage_v": 24.0,
+    "controller_supply_independent": true,
+    "drive_branch_remote_switchable": true,
+    "power_on_does_not_start_motion": true
+  },
+  "cooling": {
+    "kind": "independent_internal_cabinet_fan",
+    "warning_temperature_c": 50,
+    "pause_temperature_c": 60,
+    "resume_temperature_max_c": 45,
+    "resume_stable_duration_s": 30,
+    "missing_samples_break_stability": true
+  },
+  "carton": {
+    "length_m": 0.25,
+    "width_m": 0.2,
+    "height_m": 0.18,
+    "mass_kg": 0.8
+  },
+  "initial_counters": {
+    "infeed_count_total": 1803,
+    "outfeed_count_total": 1800,
+    "manual_removed_count_total": 0,
+    "work_in_progress": 3
+  },
+  "process": {
+    "nominal_pitch_m": 0.7999999999999999,
+    "nominal_interval_s": 2.0,
+    "unregistered_bypass": false
+  },
+  "image_scope": "仅观察输送段可见物料分布；未做尺寸或速度标定"
+}

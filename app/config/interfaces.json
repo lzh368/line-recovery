@@ -1,0 +1,28 @@
+{
+  "execution_mode": "dry_run",
+  "_readme": [
+    "本文件连接仓库 interfaces/ 下两个可运行的 Python stdio MCP，均仅支持 dry_run。",
+    "先在仓库根运行 python3 interfaces/manage.py init --profile power-return；相对路径以 app/ 为基准。",
+    "command 为空 = 应用按“工具未连接”处理：只显示状态，不查询、不执行、不编造任何动作结果。",
+    "当前服务仅支持 dry_run（独立可复位的演示状态），配置 live 时服务拒绝启动；仓库没有现场适配器。",
+    "上传包与 Agent 都不能切换这个开关。"
+  ],
+  "interfaces": {
+    "power-control": {
+      "command": "python3",
+      "args": ["../interfaces/power-control/server.py"],
+      "env": {},
+      "cwd": null,
+      "timeout_ms": 10000,
+      "note": "演示供电恢复 MCP：get_device_status / resume_conveyor；共享接口侧SQLite状态，禁止live。"
+    },
+    "cooling-control": {
+      "command": "python3",
+      "args": ["../interfaces/cooling-control/server.py"],
+      "env": {},
+      "cwd": null,
+      "timeout_ms": 10000,
+      "note": "演示散热 MCP：get_cooling_status / start_cooling；与供电服务共享状态，不自动启动输送。"
+    }
+  }
+}

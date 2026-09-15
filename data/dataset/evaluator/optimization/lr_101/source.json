@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_101",
+  "event_source_group": "repeated_power",
+  "image_source_group": "opt_a",
+  "split": "optimization"
+}

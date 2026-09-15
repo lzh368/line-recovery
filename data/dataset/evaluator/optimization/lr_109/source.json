@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_109",
+  "event_source_group": "missing_transition",
+  "image_source_group": "opt_a",
+  "split": "optimization"
+}

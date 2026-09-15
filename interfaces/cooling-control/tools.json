@@ -1,0 +1,60 @@
+{
+  "tools": [
+    {
+      "name": "get_cooling_status",
+      "description": "读取同一设备的最新温度、风机、暂停及许可，使用共享设备状态版本。",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "device_id"
+        ],
+        "properties": {
+          "device_id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9-]{1,31}$"
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "start_cooling",
+      "description": "请求开启批准的散热模式；不启动输送，不修改温度或保护阈值。",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "device_id",
+          "expected_revision",
+          "request_id"
+        ],
+        "properties": {
+          "device_id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9-]{1,31}$"
+          },
+          "expected_revision": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "request_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{8,80}$"
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ]
+}

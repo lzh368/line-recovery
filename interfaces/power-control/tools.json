@@ -1,0 +1,60 @@
+{
+  "tools": [
+    {
+      "name": "get_device_status",
+      "description": "读取设备最新可信状态，包括供电、温度、运行反馈、许可和版本；上传快照不能代替。",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "device_id"
+        ],
+        "properties": {
+          "device_id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9-]{1,31}$"
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "resume_conveyor",
+      "description": "供电已恢复后，请求后端执行批准的输送恢复流程；不接通电源，不解除保护，不接受任意速度。",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "device_id",
+          "expected_revision",
+          "request_id"
+        ],
+        "properties": {
+          "device_id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9-]{1,31}$"
+          },
+          "expected_revision": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "request_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{8,80}$"
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ]
+}

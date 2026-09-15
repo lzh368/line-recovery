@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "dataset_version": "dataset-v0.1",
+  "case_id": "lr_104",
+  "device_id": "CV-01",
+  "synthetic": true,
+  "window_start": "2026-09-05T11:51:00+08:00",
+  "window_end": "2026-09-05T11:53:00+08:00",
+  "sample_interval_s": 1,
+  "requested_task": "输送段保护暂停，部分采集通道没有导出。请区分能够确认的情况与待核实事项。",
+  "collection": {
+    "telemetry_complete": false,
+    "events_complete": true,
+    "images_are_video": false,
+    "missing_fields": [
+      "cabinet_temperature_c,thermal_pause_active,temperature_recovery_ready@2026-09-05T11:51:00+08:00..2026-09-05T11:53:00+08:00"
+    ],
+    "uploaded_state_is_live_authority": false
+  },
+  "input_files": [
+    "device.json",
+    "device_state.json",
+    "data_dictionary.json",
+    "operating_guide.md",
+    "telemetry.csv",
+    "events.jsonl",
+    "images.json"
+  ]
+}

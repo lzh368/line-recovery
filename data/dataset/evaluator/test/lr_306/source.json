@@ -1,0 +1,9 @@
+{
+  "case_id": "lr_306",
+  "split": "test",
+  "event_source_group": "test-v02-thermal_repeated_rebound_missing_sample_then_resume",
+  "image_source_group": "test-v02-base_b",
+  "event_design_kind": "new_event_chain_and_backend_combination",
+  "source_case_ids": [],
+  "new_images_not_derived_from_old_inputs": true
+}

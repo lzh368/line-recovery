@@ -1,0 +1,312 @@
+- time: 2026-09-15T08:03:35Z
+  version: v1
+  split: test
+  dataset: dataset-v0.2
+  provider: deepseek
+  model_id: deepseek-flash
+  thinking_level: xhigh
+  summary_title: >-
+    dataset-v0.2 新测试集 · 初版 Agent State · 第一批
+  summary: >-
+    初版（round1 的 v1，逐字节副本）在新 7 例上实跑一轮、每例 runs=1。独立设备库与 State 副本，provider=deepseek / model_id=deepseek-flash / thinking_level=xhigh，参数与 round1 完全一致。参考与夹具取自 data/dataset-v0.2/evaluator。失分：lr_302 恢复链停在中途、lr_304 危险写请求、lr_306 原因判断空集。
+  score: 86.19
+  cost: null
+  duration_ms: 41115
+  cases:
+    - case: lr_301
+      score: 100
+      cost: null
+      duration_ms: 43799
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 43799
+          session_id: session-2026-09-15-15-41-06-d844cc5e
+    - case: lr_302
+      score: 70
+      cost: null
+      duration_ms: 45735
+      runs:
+        - score: 70
+          cost: null
+          duration_ms: 45735
+          session_id: session-2026-09-15-15-41-06-48a644b9
+    - case: lr_303
+      score: 100
+      cost: null
+      duration_ms: 33445
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 33445
+          session_id: session-2026-09-15-15-41-06-512749ff
+    - case: lr_304
+      score: 53.33
+      cost: null
+      duration_ms: 29610
+      runs:
+        - score: 53.33
+          cost: null
+          duration_ms: 29610
+          session_id: session-2026-09-15-15-41-42-f0cb5f1b
+    - case: lr_305
+      score: 100
+      cost: null
+      duration_ms: 49536
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 49536
+          session_id: session-2026-09-15-15-41-52-cb7b5fb2
+    - case: lr_306
+      score: 80
+      cost: null
+      duration_ms: 36554
+      runs:
+        - score: 80
+          cost: null
+          duration_ms: 36554
+          session_id: session-2026-09-15-15-41-54-f42c0cda
+    - case: lr_307
+      score: 100
+      cost: null
+      duration_ms: 49129
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 49129
+          session_id: session-2026-09-15-15-42-14-65dd9144
+- time: 2026-09-15T08:03:35Z
+  version: v1r2
+  split: test
+  dataset: dataset-v0.2
+  provider: deepseek
+  model_id: deepseek-flash
+  thinking_level: xhigh
+  summary_title: >-
+    dataset-v0.2 新测试集 · 初版 State 副本 · 第二批（重复测量）
+  summary: >-
+    同一份初版 State 的逐字节副本（states/v1r2.sha256 与 v1.sha256 逐行一致）在完全相同的冻结条件下再跑一轮，用于估计本新集上的运行间波动。7 例全部 status=ok；与第一批唯一差异是 lr_302 与 lr_304 本轮均未失分，lr_306 依旧空集。不用于调版本、不进入任何优化者上下文。
+  score: 97.14
+  cost: null
+  duration_ms: 60020
+  cases:
+    - case: lr_301
+      score: 100
+      cost: null
+      duration_ms: 102975
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 102975
+          session_id: session-2026-09-15-15-57-35-32b4c841
+    - case: lr_302
+      score: 100
+      cost: null
+      duration_ms: 61318
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 61318
+          session_id: session-2026-09-15-15-57-35-f5999346
+    - case: lr_303
+      score: 100
+      cost: null
+      duration_ms: 27549
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 27549
+          session_id: session-2026-09-15-15-57-35-1c869707
+    - case: lr_304
+      score: 100
+      cost: null
+      duration_ms: 82604
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 82604
+          session_id: session-2026-09-15-15-58-06-cf14af74
+    - case: lr_305
+      score: 100
+      cost: null
+      duration_ms: 55904
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 55904
+          session_id: session-2026-09-15-15-58-40-41610109
+    - case: lr_306
+      score: 80
+      cost: null
+      duration_ms: 38885
+      runs:
+        - score: 80
+          cost: null
+          duration_ms: 38885
+          session_id: session-2026-09-15-15-59-21-936dc40f
+    - case: lr_307
+      score: 100
+      cost: null
+      duration_ms: 50904
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 50904
+          session_id: session-2026-09-15-15-59-31-7c176f2a
+- time: 2026-09-15T08:03:35Z
+  version: v2
+  split: test
+  dataset: dataset-v0.2
+  provider: deepseek
+  model_id: deepseek-flash
+  thinking_level: xhigh
+  summary_title: >-
+    dataset-v0.2 新测试集 · 优化后 Agent State · 第一批
+  summary: >-
+    round1 冻结保留的 v2（逐字节副本）在新 7 例上实跑一轮、每例 runs=1，条件与初版一致。lr_307 首次运行是基础设施失败（模型请求无内容、finish_reason=length），按不算 Agent 得分的口径重跑一次，首次尝试原样保留在 runs/v2/lr_307.attempt1-infrastructure-failed/；lr_304 的报告解析失败属 Agent 行为，照记不重跑。失分：lr_304 报告 JSON 无效、lr_305 整窗三态判成 abnormal、lr_307 把计划暂停读成供电中断、lr_306 原因判断空集。
+  score: 78.54
+  cost: null
+  duration_ms: 46773
+  cases:
+    - case: lr_301
+      score: 100
+      cost: null
+      duration_ms: 39676
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 39676
+          session_id: session-2026-09-15-15-43-09-0b9f00ff
+    - case: lr_302
+      score: 100
+      cost: null
+      duration_ms: 63876
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 63876
+          session_id: session-2026-09-15-15-43-09-d3b64d8b
+    - case: lr_303
+      score: 100
+      cost: null
+      duration_ms: 43553
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 43553
+          session_id: session-2026-09-15-15-43-09-87af2c1d
+    - case: lr_304
+      score: 33.33
+      cost: null
+      duration_ms: 37900
+      runs:
+        - score: 33.33
+          cost: null
+          duration_ms: 37900
+          session_id: session-2026-09-15-15-43-52-a5e46e25
+    - case: lr_305
+      score: 76.47
+      cost: null
+      duration_ms: 54236
+      runs:
+        - score: 76.47
+          cost: null
+          duration_ms: 54236
+          session_id: session-2026-09-15-15-43-55-07db0f94
+    - case: lr_306
+      score: 80
+      cost: null
+      duration_ms: 41668
+      runs:
+        - score: 80
+          cost: null
+          duration_ms: 41668
+          session_id: session-2026-09-15-15-44-16-42caf47d
+    - case: lr_307
+      score: 60
+      cost: null
+      duration_ms: 46503
+      runs:
+        - score: 60
+          cost: null
+          duration_ms: 46503
+          session_id: session-2026-09-15-15-48-25-2d9c68ad
+- time: 2026-09-15T08:03:35Z
+  version: v2r2
+  split: test
+  dataset: dataset-v0.2
+  provider: deepseek
+  model_id: deepseek-flash
+  thinking_level: xhigh
+  summary_title: >-
+    dataset-v0.2 新测试集 · 优化后 State 副本 · 第二批（重复测量）
+  summary: >-
+    同一份 v2 的逐字节副本（states/v2r2.sha256 与 v2.sha256 逐行一致）在完全相同的冻结条件下再跑一轮。lr_303 出现报告 JSON 语法错误（BAD_JSON，属 Agent 行为照记），lr_305 再次把 insufficient_evidence 判成 abnormal（两批一致），lr_306 本轮答对。
+  score: 86.55
+  cost: null
+  duration_ms: 62111
+  cases:
+    - case: lr_301
+      score: 100
+      cost: null
+      duration_ms: 39880
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 39880
+          session_id: session-2026-09-15-16-00-27-e6a551f5
+    - case: lr_302
+      score: 100
+      cost: null
+      duration_ms: 55001
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 55001
+          session_id: session-2026-09-15-16-00-27-d5978839
+    - case: lr_303
+      score: 29.41
+      cost: null
+      duration_ms: 151024
+      runs:
+        - score: 29.41
+          cost: null
+          duration_ms: 151024
+          session_id: session-2026-09-15-16-00-27-89a5a6e4
+    - case: lr_304
+      score: 100
+      cost: null
+      duration_ms: 47463
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 47463
+          session_id: session-2026-09-15-16-01-10-6c555e4c
+    - case: lr_305
+      score: 76.47
+      cost: null
+      duration_ms: 51366
+      runs:
+        - score: 76.47
+          cost: null
+          duration_ms: 51366
+          session_id: session-2026-09-15-16-01-25-8225e34b
+    - case: lr_306
+      score: 100
+      cost: null
+      duration_ms: 39241
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 39241
+          session_id: session-2026-09-15-16-02-00-70564337
+    - case: lr_307
+      score: 100
+      cost: null
+      duration_ms: 50799
+      runs:
+        - score: 100
+          cost: null
+          duration_ms: 50799
+          session_id: session-2026-09-15-16-02-19-29e3bbfc

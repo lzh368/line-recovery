@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RecoveryInputRequest v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "dataset_version",
+    "case_id",
+    "device_id",
+    "synthetic",
+    "window_start",
+    "window_end",
+    "sample_interval_s",
+    "requested_task",
+    "collection",
+    "input_files"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "dataset_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^lr_[0-9]{3}$"
+    },
+    "device_id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9-]{1,31}$"
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "window_start": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "window_end": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sample_interval_s": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "requested_task": {
+      "type": "string",
+      "minLength": 1
+    },
+    "collection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "telemetry_complete",
+        "events_complete",
+        "images_are_video",
+        "missing_fields",
+        "uploaded_state_is_live_authority"
+      ],
+      "properties": {
+        "telemetry_complete": {
+          "type": "boolean"
+        },
+        "events_complete": {
+          "type": "boolean"
+        },
+        "images_are_video": {
+          "const": false
+        },
+        "missing_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "uploaded_state_is_live_authority": {
+          "const": false
+        }
+      }
+    },
+    "input_files": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

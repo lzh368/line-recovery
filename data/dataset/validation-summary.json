@@ -1,0 +1,18 @@
+{
+  "kind": "dataset_integrity_not_agent_score",
+  "passed": true,
+  "checks": 27014,
+  "cases": 17,
+  "rows": 2057,
+  "events": 238,
+  "images_referenced": 17,
+  "unique_base_images": 4,
+  "agent_runs": 0,
+  "device_actions": 0,
+  "new_regression_tests_passed": 16,
+  "example_regression_tests_passed": 11,
+  "byte_reproduction_passed": true,
+  "independent_expert_review": false,
+  "source_group_isolation_passed": true,
+  "zip_crc_and_bytes_passed": true
+}

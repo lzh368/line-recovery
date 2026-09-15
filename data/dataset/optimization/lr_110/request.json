@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "dataset_version": "dataset-v0.1",
+  "case_id": "lr_110",
+  "device_id": "CV-01",
+  "synthetic": true,
+  "window_start": "2026-09-11T11:33:00+08:00",
+  "window_end": "2026-09-11T11:35:00+08:00",
+  "sample_interval_s": 1,
+  "requested_task": "同一时段出现过控制柜温度告警和短时掉电，来电后输送仍停止。请核对事件顺序。",
+  "collection": {
+    "telemetry_complete": false,
+    "events_complete": false,
+    "images_are_video": false,
+    "missing_fields": [
+      "motor_current_a@2026-09-11T11:33:10+08:00..2026-09-11T11:33:30+08:00"
+    ],
+    "uploaded_state_is_live_authority": false
+  },
+  "input_files": [
+    "device.json",
+    "device_state.json",
+    "data_dictionary.json",
+    "operating_guide.md",
+    "telemetry.csv",
+    "events.jsonl",
+    "images.json"
+  ]
+}

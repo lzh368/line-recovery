@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_108",
+  "event_source_group": "fan_no_feedback",
+  "image_source_group": "opt_b",
+  "split": "optimization"
+}

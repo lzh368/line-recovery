@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "case_id": "{{case_id}}",
+  "device_id": "{{device_id}}",
+  "diagnosis": {
+    "window_status": "{{normal|abnormal|insufficient_evidence}}",
+    "fault_types": [],
+    "observed_end_state": "{{running|stopped|unknown}}",
+    "summary": "{{只解释上传时间窗，不混入后续动作结果}}",
+    "evidence": [{"file": "{{输入文件相对路径}}", "locator": "{{时间区间、事件编号、JSON字段或图片时间}}", "observation": "{{实际观察}}"}],
+    "recommendations": ["{{下一步建议}}"]
+  },
+  "recovery": {
+    "decision": "{{no_action|request_recovery|human_required|insufficient_evidence}}",
+    "status": "not_attempted",
+    "summary": "{{未调用工具时说明未执行；调用后按真实结果填写}}",
+    "operations": [],
+    "latest_state": null
+  },
+  "limitations": ["{{资料限制和未核实事项}}"]
+}

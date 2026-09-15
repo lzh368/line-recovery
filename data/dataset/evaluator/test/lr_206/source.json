@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_206",
+  "event_source_group": "thermal_tail_offline",
+  "image_source_group": "test_b",
+  "split": "test"
+}

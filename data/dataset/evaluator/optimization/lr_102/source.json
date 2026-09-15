@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_102",
+  "event_source_group": "thermal_rise",
+  "image_source_group": "opt_b",
+  "split": "optimization"
+}

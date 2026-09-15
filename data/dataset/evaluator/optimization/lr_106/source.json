@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_106",
+  "event_source_group": "cooling_rebound",
+  "image_source_group": "opt_a",
+  "split": "optimization"
+}

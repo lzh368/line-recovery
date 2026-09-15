@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Fork PRs need no write token, repository secrets, model API or live device.
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-checks:
+    name: offline-checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DEEPSEEK_API_KEY: ""
+      OPENROUTER_API_KEY: ""
+      LINE_RECOVERY_MODE: dry_run
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Set up Node 24
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - name: Set up Python 3.11
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.11"
+      - name: Install locked dependencies
+        working-directory: app
+        run: npm ci --no-audit --no-fund
+      - name: Type check
+        working-directory: app
+        run: ./node_modules/.bin/tsc --noEmit
+      - name: Application and controlled MCP checks
+        working-directory: app
+        run: |
+          npm run check
+          npm run check:mcp
+          npm run check:agent
+          npm run check:datasets
+      - name: Python MCP tests
+        run: python3 -m unittest discover -s interfaces/tests -q
+      - name: Dataset integrity and upload packaging
+        run: |
+          python3 tools/datasets.py check
+          python3 tools/check_evaluation_bundle.py
+          python3 tools/check_supplemental.py zip
+      - name: Backend fixture compatibility
+        run: |
+          python3 tools/check_backend_fixtures.py --fixtures data/dataset/evaluator

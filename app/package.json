@@ -1,0 +1,29 @@
+{
+  "name": "line-recovery-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "产线恢复助手 · 上传纸箱输送工位资料、分析异常、按许可请求恢复并核验反馈",
+  "scripts": {
+    "setup": "tsx src/setup-agent.ts",
+    "start": "tsx src/server.ts",
+    "check": "tsx tests/run-offline-check.mts",
+    "check:mcp": "tsx tests/mcp-integration.mts",
+    "check:agent": "tsx tests/agent-tools.mts",
+    "check:datasets": "tsx tests/dataset-selection.mts"
+  },
+  "dependencies": {
+    "@prismshadow/penguin-core": "^0.2.11",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.6.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

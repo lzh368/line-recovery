@@ -1,0 +1,25 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+runtime/
+penguin_data/
+private/
+*.zip
+
+# Raw experiment artifacts (multi-hundred-MB traces and run-time libraries).
+# Kept on disk; the leading reports and scores are committed.
+reports/experiments/*/runs/
+reports/experiments/*/optimizer/
+
+# Session trace artifacts.
+trace/
+traces/
+*.trace.json
+*.trace.jsonl

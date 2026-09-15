@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_105",
+  "event_source_group": "planned_branch_isolation",
+  "image_source_group": "opt_a",
+  "split": "optimization"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "dataset_version": "dataset-v0.1",
+  "case_id": "lr_201",
+  "device_id": "CV-01",
+  "synthetic": true,
+  "window_start": "2026-09-02T12:50:00+08:00",
+  "window_end": "2026-09-02T12:52:00+08:00",
+  "sample_interval_s": 1,
+  "requested_task": "散热已经启动，但运行尚未恢复。请核对温度趋势和当前条件，不要重复执行已完成的动作。",
+  "collection": {
+    "telemetry_complete": false,
+    "events_complete": false,
+    "images_are_video": false,
+    "missing_fields": [
+      "cabinet_temperature_c@2026-09-02T12:51:43+08:00..2026-09-02T12:51:45+08:00"
+    ],
+    "uploaded_state_is_live_authority": false
+  },
+  "input_files": [
+    "device.json",
+    "device_state.json",
+    "data_dictionary.json",
+    "operating_guide.md",
+    "telemetry.csv",
+    "events.jsonl",
+    "images.json"
+  ]
+}

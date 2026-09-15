@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "dataset_version": "dataset-v0.2",
+  "case_id": "lr_301",
+  "device_id": "CV-01",
+  "synthetic": true,
+  "window_start": "2026-09-08T08:12:00+08:00",
+  "window_end": "2026-09-08T08:14:00+08:00",
+  "sample_interval_s": 1,
+  "requested_task": "请核对这段输送工位资料，说明停顿或运行的经过，并查询当前设备状态，判断是否需要及允许恢复。若执行操作，请核对后续反馈；资料不能支持的结论请保留不确定性。",
+  "collection": {
+    "telemetry_complete": false,
+    "events_complete": false,
+    "images_are_video": false,
+    "missing_fields": [
+      "motor_current_a@2026-09-08T08:12:37+08:00..2026-09-08T08:13:26+08:00"
+    ],
+    "uploaded_state_is_live_authority": false
+  },
+  "input_files": [
+    "device.json",
+    "device_state.json",
+    "data_dictionary.json",
+    "operating_guide.md",
+    "telemetry.csv",
+    "events.jsonl",
+    "images.json"
+  ]
+}

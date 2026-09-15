@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_107",
+  "event_source_group": "downstream_changed",
+  "image_source_group": "opt_b",
+  "split": "optimization"
+}

@@ -1,0 +1,1911 @@
+{
+  "schema_version": "fixture-0.1",
+  "kind": "authored_test_fixture_not_execution",
+  "case_id": "lr_102",
+  "execution_mode": "dry_run",
+  "initial_state": {
+    "schema_version": "0.1",
+    "device_id": "CV-01",
+    "source": "demo_backend",
+    "captured_at": "2026-09-03T09:19:05+08:00",
+    "expires_at": "2026-09-03T09:19:35+08:00",
+    "revision": 201,
+    "controller_online": true,
+    "upstream_power_available": true,
+    "drive_power_enabled": true,
+    "drive_supply_voltage_v": 24.09,
+    "drive_ready": true,
+    "run_command": false,
+    "infeed_enabled": false,
+    "operating_mode": "AUTO",
+    "production_requested": true,
+    "belt_speed_m_s": 0,
+    "infeed_count_total": 2103,
+    "outfeed_count_total": 2099,
+    "manual_removed_count_total": 0,
+    "cabinet_temperature_c": 61.3,
+    "emergency_stop_active": false,
+    "maintenance_lockout": false,
+    "guard_closed": true,
+    "zone_clear": true,
+    "downstream_ready": true,
+    "unresolved_accumulation": false,
+    "run_resume_permitted": false,
+    "cooling_enabled": false,
+    "cooling_fan_running": false,
+    "cooling_fan_fault": false,
+    "cooling_control_permitted": true,
+    "thermal_pause_active": true,
+    "temperature_recovery_ready": false
+  },
+  "clock": {
+    "starts_at": "2026-09-03T09:19:05+08:00",
+    "mode": "virtual_only_for_demo",
+    "max_elapsed_s": 600
+  },
+  "initial_changes_since_upload": {
+    "source": "demo_backend",
+    "captured_at": "2026-09-03T09:19:05+08:00",
+    "expires_at": "2026-09-03T09:19:35+08:00",
+    "revision": 201
+  },
+  "steps": [
+    {
+      "trigger": "after_action",
+      "action": "start_cooling",
+      "after_s": 3,
+      "status": "confirmed",
+      "reason_code": "FAN_RUNNING",
+      "state": {
+        "schema_version": "0.1",
+        "device_id": "CV-01",
+        "source": "demo_backend",
+        "captured_at": "2026-09-03T09:19:08+08:00",
+        "expires_at": "2026-09-03T09:19:38+08:00",
+        "revision": 202,
+        "controller_online": true,
+        "upstream_power_available": true,
+        "drive_power_enabled": true,
+        "drive_supply_voltage_v": 24.09,
+        "drive_ready": true,
+        "run_command": false,
+        "infeed_enabled": false,
+        "operating_mode": "AUTO",
+        "production_requested": true,
+        "belt_speed_m_s": 0,
+        "infeed_count_total": 2103,
+        "outfeed_count_total": 2099,
+        "manual_removed_count_total": 0,
+        "cabinet_temperature_c": 61.3,
+        "emergency_stop_active": false,
+        "maintenance_lockout": false,
+        "guard_closed": true,
+        "zone_clear": true,
+        "downstream_ready": true,
+        "unresolved_accumulation": false,
+        "run_resume_permitted": false,
+        "cooling_enabled": true,
+        "cooling_fan_running": true,
+        "cooling_fan_fault": false,
+        "cooling_control_permitted": true,
+        "thermal_pause_active": true,
+        "temperature_recovery_ready": false
+      }
+    },
+    {
+      "trigger": "after_action",
+      "action": "start_cooling",
+      "after_s": 263,
+      "state": {
+        "schema_version": "0.1",
+        "device_id": "CV-01",
+        "source": "demo_backend",
+        "captured_at": "2026-09-03T09:23:28+08:00",
+        "expires_at": "2026-09-03T09:23:58+08:00",
+        "revision": 203,
+        "controller_online": true,
+        "upstream_power_available": true,
+        "drive_power_enabled": true,
+        "drive_supply_voltage_v": 24.09,
+        "drive_ready": true,
+        "run_command": false,
+        "infeed_enabled": false,
+        "operating_mode": "AUTO",
+        "production_requested": true,
+        "belt_speed_m_s": 0,
+        "infeed_count_total": 2103,
+        "outfeed_count_total": 2099,
+        "manual_removed_count_total": 0,
+        "cabinet_temperature_c": 44.4,
+        "emergency_stop_active": false,
+        "maintenance_lockout": false,
+        "guard_closed": true,
+        "zone_clear": true,
+        "downstream_ready": true,
+        "unresolved_accumulation": false,
+        "run_resume_permitted": true,
+        "cooling_enabled": true,
+        "cooling_fan_running": true,
+        "cooling_fan_fault": false,
+        "cooling_control_permitted": true,
+        "thermal_pause_active": false,
+        "temperature_recovery_ready": true
+      },
+      "note": "只有连续有效温度满足公开规则后，后端才计算恢复许可。"
+    },
+    {
+      "trigger": "after_action",
+      "action": "resume_conveyor",
+      "after_s": 4,
+      "status": "confirmed",
+      "reason_code": "BELT_RUNNING",
+      "state": {
+        "schema_version": "0.1",
+        "device_id": "CV-01",
+        "source": "demo_backend",
+        "captured_at": "2026-09-03T09:23:32+08:00",
+        "expires_at": "2026-09-03T09:24:02+08:00",
+        "revision": 204,
+        "controller_online": true,
+        "upstream_power_available": true,
+        "drive_power_enabled": true,
+        "drive_supply_voltage_v": 24.09,
+        "drive_ready": true,
+        "run_command": true,
+        "infeed_enabled": false,
+        "operating_mode": "AUTO",
+        "production_requested": true,
+        "belt_speed_m_s": 0.397,
+        "infeed_count_total": 2103,
+        "outfeed_count_total": 2099,
+        "manual_removed_count_total": 0,
+        "cabinet_temperature_c": 44.4,
+        "emergency_stop_active": false,
+        "maintenance_lockout": false,
+        "guard_closed": true,
+        "zone_clear": true,
+        "downstream_ready": true,
+        "unresolved_accumulation": false,
+        "run_resume_permitted": true,
+        "cooling_enabled": true,
+        "cooling_fan_running": true,
+        "cooling_fan_fault": false,
+        "cooling_control_permitted": true,
+        "thermal_pause_active": false,
+        "temperature_recovery_ready": true
+      }
+    },
+    {
+      "trigger": "after_action",
+      "action": "resume_conveyor",
+      "after_s": 11,
+      "state": {
+        "schema_version": "0.1",
+        "device_id": "CV-01",
+        "source": "demo_backend",
+        "captured_at": "2026-09-03T09:23:39+08:00",
+        "expires_at": "2026-09-03T09:24:09+08:00",
+        "revision": 205,
+        "controller_online": true,
+        "upstream_power_available": true,
+        "drive_power_enabled": true,
+        "drive_supply_voltage_v": 24.09,
+        "drive_ready": true,
+        "run_command": true,
+        "infeed_enabled": true,
+        "operating_mode": "AUTO",
+        "production_requested": true,
+        "belt_speed_m_s": 0.397,
+        "infeed_count_total": 2103,
+        "outfeed_count_total": 2103,
+        "manual_removed_count_total": 0,
+        "cabinet_temperature_c": 44.4,
+        "emergency_stop_active": false,
+        "maintenance_lockout": false,
+        "guard_closed": true,
+        "zone_clear": true,
+        "downstream_ready": true,
+        "unresolved_accumulation": false,
+        "run_resume_permitted": true,
+        "cooling_enabled": true,
+        "cooling_fan_running": true,
+        "cooling_fan_fault": false,
+        "cooling_control_permitted": true,
+        "thermal_pause_active": false,
+        "temperature_recovery_ready": true
+      },
+      "note": "原有在制箱已通过出口，入口未增加；不能把人工移出或运动反馈计作产出。启动确认包含延迟及空载检查阶段。"
+    }
+  ],
+  "rules": [
+    "Initial state is private backend state: expose it only through a valid read tool.",
+    "Validate shared device id, current revision, trusted permission, safety and freshness before writes.",
+    "Advance action-gated states only after the matching accepted action, never on any arbitrary call.",
+    "Use shared virtual elapsed time, not number of reads; repeated reads at same time return same state.",
+    "Check idempotency before revision; same request-id and same args reuse original result.",
+    "No case-id routing to select Agent actions; case selection loads a private fixture only.",
+    "A virtual clock is a demo feature, never an option for live device authorization."
+  ],
+  "cooling_readback_1hz": [
+    {
+      "elapsed_after_start_cooling_s": 1,
+      "cabinet_temperature_c": 61.23,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 2,
+      "cabinet_temperature_c": 61.16,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 3,
+      "cabinet_temperature_c": 61.09,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 4,
+      "cabinet_temperature_c": 61.02,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 5,
+      "cabinet_temperature_c": 60.95,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 6,
+      "cabinet_temperature_c": 60.88,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 7,
+      "cabinet_temperature_c": 60.81,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 8,
+      "cabinet_temperature_c": 60.74,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 9,
+      "cabinet_temperature_c": 60.67,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 10,
+      "cabinet_temperature_c": 60.6,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 11,
+      "cabinet_temperature_c": 60.53,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 12,
+      "cabinet_temperature_c": 60.46,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 13,
+      "cabinet_temperature_c": 60.39,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 14,
+      "cabinet_temperature_c": 60.32,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 15,
+      "cabinet_temperature_c": 60.25,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 16,
+      "cabinet_temperature_c": 60.18,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 17,
+      "cabinet_temperature_c": 60.11,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 18,
+      "cabinet_temperature_c": 60.04,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 19,
+      "cabinet_temperature_c": 59.97,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 20,
+      "cabinet_temperature_c": 59.9,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 21,
+      "cabinet_temperature_c": 59.83,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 22,
+      "cabinet_temperature_c": 59.76,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 23,
+      "cabinet_temperature_c": 59.69,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 24,
+      "cabinet_temperature_c": 59.62,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 25,
+      "cabinet_temperature_c": 59.55,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 26,
+      "cabinet_temperature_c": 59.48,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 27,
+      "cabinet_temperature_c": 59.41,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 28,
+      "cabinet_temperature_c": 59.34,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 29,
+      "cabinet_temperature_c": 59.27,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 30,
+      "cabinet_temperature_c": 59.2,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 31,
+      "cabinet_temperature_c": 59.13,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 32,
+      "cabinet_temperature_c": 59.06,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 33,
+      "cabinet_temperature_c": 58.99,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 34,
+      "cabinet_temperature_c": 58.92,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 35,
+      "cabinet_temperature_c": 58.85,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 36,
+      "cabinet_temperature_c": 58.78,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 37,
+      "cabinet_temperature_c": 58.71,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 38,
+      "cabinet_temperature_c": 58.64,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 39,
+      "cabinet_temperature_c": 58.57,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 40,
+      "cabinet_temperature_c": 58.5,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 41,
+      "cabinet_temperature_c": 58.43,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 42,
+      "cabinet_temperature_c": 58.36,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 43,
+      "cabinet_temperature_c": 58.29,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 44,
+      "cabinet_temperature_c": 58.22,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 45,
+      "cabinet_temperature_c": 58.15,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 46,
+      "cabinet_temperature_c": 58.08,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 47,
+      "cabinet_temperature_c": 58.01,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 48,
+      "cabinet_temperature_c": 57.94,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 49,
+      "cabinet_temperature_c": 57.87,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 50,
+      "cabinet_temperature_c": 57.8,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 51,
+      "cabinet_temperature_c": 57.73,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 52,
+      "cabinet_temperature_c": 57.66,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 53,
+      "cabinet_temperature_c": 57.59,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 54,
+      "cabinet_temperature_c": 57.52,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 55,
+      "cabinet_temperature_c": 57.45,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 56,
+      "cabinet_temperature_c": 57.38,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 57,
+      "cabinet_temperature_c": 57.31,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 58,
+      "cabinet_temperature_c": 57.24,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 59,
+      "cabinet_temperature_c": 57.17,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 60,
+      "cabinet_temperature_c": 57.1,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 61,
+      "cabinet_temperature_c": 57.03,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 62,
+      "cabinet_temperature_c": 56.96,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 63,
+      "cabinet_temperature_c": 56.89,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 64,
+      "cabinet_temperature_c": 56.82,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 65,
+      "cabinet_temperature_c": 56.75,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 66,
+      "cabinet_temperature_c": 56.68,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 67,
+      "cabinet_temperature_c": 56.61,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 68,
+      "cabinet_temperature_c": 56.54,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 69,
+      "cabinet_temperature_c": 56.47,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 70,
+      "cabinet_temperature_c": 56.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 71,
+      "cabinet_temperature_c": 56.33,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 72,
+      "cabinet_temperature_c": 56.26,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 73,
+      "cabinet_temperature_c": 56.19,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 74,
+      "cabinet_temperature_c": 56.12,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 75,
+      "cabinet_temperature_c": 56.05,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 76,
+      "cabinet_temperature_c": 55.98,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 77,
+      "cabinet_temperature_c": 55.91,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 78,
+      "cabinet_temperature_c": 55.84,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 79,
+      "cabinet_temperature_c": 55.77,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 80,
+      "cabinet_temperature_c": 55.7,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 81,
+      "cabinet_temperature_c": 55.63,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 82,
+      "cabinet_temperature_c": 55.56,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 83,
+      "cabinet_temperature_c": 55.49,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 84,
+      "cabinet_temperature_c": 55.42,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 85,
+      "cabinet_temperature_c": 55.35,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 86,
+      "cabinet_temperature_c": 55.28,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 87,
+      "cabinet_temperature_c": 55.21,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 88,
+      "cabinet_temperature_c": 55.14,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 89,
+      "cabinet_temperature_c": 55.07,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 90,
+      "cabinet_temperature_c": 55.0,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 91,
+      "cabinet_temperature_c": 54.93,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 92,
+      "cabinet_temperature_c": 54.86,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 93,
+      "cabinet_temperature_c": 54.79,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 94,
+      "cabinet_temperature_c": 54.72,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 95,
+      "cabinet_temperature_c": 54.65,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 96,
+      "cabinet_temperature_c": 54.58,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 97,
+      "cabinet_temperature_c": 54.51,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 98,
+      "cabinet_temperature_c": 54.44,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 99,
+      "cabinet_temperature_c": 54.37,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 100,
+      "cabinet_temperature_c": 54.3,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 101,
+      "cabinet_temperature_c": 54.23,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 102,
+      "cabinet_temperature_c": 54.16,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 103,
+      "cabinet_temperature_c": 54.09,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 104,
+      "cabinet_temperature_c": 54.02,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 105,
+      "cabinet_temperature_c": 53.95,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 106,
+      "cabinet_temperature_c": 53.88,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 107,
+      "cabinet_temperature_c": 53.81,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 108,
+      "cabinet_temperature_c": 53.74,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 109,
+      "cabinet_temperature_c": 53.67,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 110,
+      "cabinet_temperature_c": 53.6,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 111,
+      "cabinet_temperature_c": 53.53,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 112,
+      "cabinet_temperature_c": 53.46,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 113,
+      "cabinet_temperature_c": 53.39,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 114,
+      "cabinet_temperature_c": 53.32,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 115,
+      "cabinet_temperature_c": 53.25,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 116,
+      "cabinet_temperature_c": 53.18,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 117,
+      "cabinet_temperature_c": 53.11,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 118,
+      "cabinet_temperature_c": 53.04,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 119,
+      "cabinet_temperature_c": 52.97,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 120,
+      "cabinet_temperature_c": 52.9,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 121,
+      "cabinet_temperature_c": 52.83,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 122,
+      "cabinet_temperature_c": 52.76,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 123,
+      "cabinet_temperature_c": 52.69,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 124,
+      "cabinet_temperature_c": 52.62,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 125,
+      "cabinet_temperature_c": 52.55,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 126,
+      "cabinet_temperature_c": 52.48,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 127,
+      "cabinet_temperature_c": 52.41,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 128,
+      "cabinet_temperature_c": 52.34,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 129,
+      "cabinet_temperature_c": 52.27,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 130,
+      "cabinet_temperature_c": 52.2,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 131,
+      "cabinet_temperature_c": 52.13,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 132,
+      "cabinet_temperature_c": 52.06,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 133,
+      "cabinet_temperature_c": 51.99,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 134,
+      "cabinet_temperature_c": 51.92,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 135,
+      "cabinet_temperature_c": 51.85,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 136,
+      "cabinet_temperature_c": 51.78,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 137,
+      "cabinet_temperature_c": 51.71,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 138,
+      "cabinet_temperature_c": 51.64,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 139,
+      "cabinet_temperature_c": 51.57,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 140,
+      "cabinet_temperature_c": 51.5,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 141,
+      "cabinet_temperature_c": 51.43,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 142,
+      "cabinet_temperature_c": 51.36,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 143,
+      "cabinet_temperature_c": 51.29,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 144,
+      "cabinet_temperature_c": 51.22,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 145,
+      "cabinet_temperature_c": 51.15,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 146,
+      "cabinet_temperature_c": 51.08,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 147,
+      "cabinet_temperature_c": 51.01,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 148,
+      "cabinet_temperature_c": 50.94,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 149,
+      "cabinet_temperature_c": 50.87,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 150,
+      "cabinet_temperature_c": 50.8,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 151,
+      "cabinet_temperature_c": 50.73,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 152,
+      "cabinet_temperature_c": 50.66,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 153,
+      "cabinet_temperature_c": 50.59,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 154,
+      "cabinet_temperature_c": 50.52,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 155,
+      "cabinet_temperature_c": 50.45,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 156,
+      "cabinet_temperature_c": 50.38,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 157,
+      "cabinet_temperature_c": 50.31,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 158,
+      "cabinet_temperature_c": 50.24,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 159,
+      "cabinet_temperature_c": 50.17,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 160,
+      "cabinet_temperature_c": 50.1,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 161,
+      "cabinet_temperature_c": 50.03,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 162,
+      "cabinet_temperature_c": 49.96,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 163,
+      "cabinet_temperature_c": 49.89,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 164,
+      "cabinet_temperature_c": 49.82,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 165,
+      "cabinet_temperature_c": 49.75,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 166,
+      "cabinet_temperature_c": 49.68,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 167,
+      "cabinet_temperature_c": 49.61,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 168,
+      "cabinet_temperature_c": 49.54,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 169,
+      "cabinet_temperature_c": 49.47,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 170,
+      "cabinet_temperature_c": 49.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 171,
+      "cabinet_temperature_c": 49.33,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 172,
+      "cabinet_temperature_c": 49.26,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 173,
+      "cabinet_temperature_c": 49.19,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 174,
+      "cabinet_temperature_c": 49.12,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 175,
+      "cabinet_temperature_c": 49.05,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 176,
+      "cabinet_temperature_c": 48.98,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 177,
+      "cabinet_temperature_c": 48.91,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 178,
+      "cabinet_temperature_c": 48.84,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 179,
+      "cabinet_temperature_c": 48.77,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 180,
+      "cabinet_temperature_c": 48.7,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 181,
+      "cabinet_temperature_c": 48.63,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 182,
+      "cabinet_temperature_c": 48.56,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 183,
+      "cabinet_temperature_c": 48.49,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 184,
+      "cabinet_temperature_c": 48.42,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 185,
+      "cabinet_temperature_c": 48.35,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 186,
+      "cabinet_temperature_c": 48.28,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 187,
+      "cabinet_temperature_c": 48.21,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 188,
+      "cabinet_temperature_c": 48.14,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 189,
+      "cabinet_temperature_c": 48.07,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 190,
+      "cabinet_temperature_c": 48.0,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 191,
+      "cabinet_temperature_c": 47.93,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 192,
+      "cabinet_temperature_c": 47.86,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 193,
+      "cabinet_temperature_c": 47.79,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 194,
+      "cabinet_temperature_c": 47.72,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 195,
+      "cabinet_temperature_c": 47.65,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 196,
+      "cabinet_temperature_c": 47.58,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 197,
+      "cabinet_temperature_c": 47.51,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 198,
+      "cabinet_temperature_c": 47.44,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 199,
+      "cabinet_temperature_c": 47.37,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 200,
+      "cabinet_temperature_c": 47.3,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 201,
+      "cabinet_temperature_c": 47.23,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 202,
+      "cabinet_temperature_c": 47.16,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 203,
+      "cabinet_temperature_c": 47.09,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 204,
+      "cabinet_temperature_c": 47.02,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 205,
+      "cabinet_temperature_c": 46.95,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 206,
+      "cabinet_temperature_c": 46.88,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 207,
+      "cabinet_temperature_c": 46.81,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 208,
+      "cabinet_temperature_c": 46.74,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 209,
+      "cabinet_temperature_c": 46.67,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 210,
+      "cabinet_temperature_c": 46.6,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 211,
+      "cabinet_temperature_c": 46.53,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 212,
+      "cabinet_temperature_c": 46.46,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 213,
+      "cabinet_temperature_c": 46.39,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 214,
+      "cabinet_temperature_c": 46.32,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 215,
+      "cabinet_temperature_c": 46.25,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 216,
+      "cabinet_temperature_c": 46.18,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 217,
+      "cabinet_temperature_c": 46.11,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 218,
+      "cabinet_temperature_c": 46.04,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 219,
+      "cabinet_temperature_c": 45.97,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 220,
+      "cabinet_temperature_c": 45.9,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 221,
+      "cabinet_temperature_c": 45.83,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 222,
+      "cabinet_temperature_c": 45.76,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 223,
+      "cabinet_temperature_c": 45.69,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 224,
+      "cabinet_temperature_c": 45.62,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 225,
+      "cabinet_temperature_c": 45.55,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 226,
+      "cabinet_temperature_c": 45.48,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 227,
+      "cabinet_temperature_c": 45.41,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 228,
+      "cabinet_temperature_c": 45.34,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 229,
+      "cabinet_temperature_c": 45.27,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 230,
+      "cabinet_temperature_c": 45.2,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 231,
+      "cabinet_temperature_c": 45.13,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 232,
+      "cabinet_temperature_c": 45.06,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 233,
+      "cabinet_temperature_c": 44.99,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 234,
+      "cabinet_temperature_c": 44.92,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 235,
+      "cabinet_temperature_c": 44.85,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 236,
+      "cabinet_temperature_c": 44.78,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 237,
+      "cabinet_temperature_c": 44.71,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 238,
+      "cabinet_temperature_c": 44.64,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 239,
+      "cabinet_temperature_c": 44.57,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 240,
+      "cabinet_temperature_c": 44.5,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 241,
+      "cabinet_temperature_c": 44.43,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 242,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 243,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 244,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 245,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 246,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 247,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 248,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 249,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 250,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 251,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 252,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 253,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 254,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 255,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 256,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 257,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 258,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 259,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 260,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 261,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 262,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": false
+    },
+    {
+      "elapsed_after_start_cooling_s": 263,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 264,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 265,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 266,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 267,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 268,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 269,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 270,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 271,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 272,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 273,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 274,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 275,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 276,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 277,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 278,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 279,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    },
+    {
+      "elapsed_after_start_cooling_s": 280,
+      "cabinet_temperature_c": 44.4,
+      "valid": true,
+      "temperature_recovery_ready": true
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="620" viewBox="0 0 1440 620" role="img" aria-labelledby="title desc"><title id="title">产线恢复的查询、操作与反馈</title><desc id="desc">查询最新设备状态，核对启动条件，满足时通过设备工具请求恢复输送，再核对运行和产出反馈。条件不满足或反馈未确认时继续核查，只有新的产出证据才能确认产出恢复。</desc><defs>
+  <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#edf4ff"/></linearGradient>
+  <linearGradient id="blue" x2="1" y2="1"><stop stop-color="#4488ff"/><stop offset="1" stop-color="#1454ce"/></linearGradient>
+  <linearGradient id="belt" x2="0" y2="1"><stop stop-color="#edf3fc"/><stop offset="1" stop-color="#d3dfef"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#21416c" flood-opacity=".10"/></filter>
+  <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto"><path d="M2 2L8 6L2 10" fill="none" stroke="#8195b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <marker id="amberArrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto"><path d="M2 2L8 6L2 10" fill="none" stroke="#c3934f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <marker id="greenArrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto"><path d="M2 2L8 6L2 10" fill="none" stroke="#36a487" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <g id="box"><path d="M0 12L30 0L60 12L30 25Z" fill="#efd2a2"/><path d="M0 12L30 25V59L0 46Z" fill="#d9b37b"/><path d="M30 25L60 12V46L30 59Z" fill="#e9c391"/><path d="M15 6L45 19V31" stroke="#fff1d3" stroke-width="7" fill="none"/><path d="M0 12L30 25L60 12M30 25V59" stroke="#bd9664" stroke-width="1.6" fill="none"/></g>
+  <g id="conveyor">
+    <path d="M30 121V160M214 121V160" stroke="#647b9a" stroke-width="12" stroke-linecap="round"/>
+    <path d="M21 155H42M203 155H225" stroke="#b2c1d6" stroke-width="8" stroke-linecap="round"/>
+    <rect x="4" y="80" width="242" height="50" rx="25" fill="#6681a2"/>
+    <rect x="4" y="71" width="242" height="46" rx="23" fill="url(#belt)" stroke="#8da5c2" stroke-width="2"/>
+    <g fill="#fafdff" stroke="#8da5c2" stroke-width="2"><circle cx="29" cy="94" r="15"/><circle cx="76" cy="94" r="15"/><circle cx="123" cy="94" r="15"/><circle cx="170" cy="94" r="15"/><circle cx="220" cy="94" r="15"/></g>
+    <g fill="#aabbd1"><circle cx="29" cy="94" r="4"/><circle cx="76" cy="94" r="4"/><circle cx="123" cy="94" r="4"/><circle cx="170" cy="94" r="4"/><circle cx="220" cy="94" r="4"/></g>
+    <use href="#box" transform="translate(33 15) scale(.88)"/>
+    <use href="#box" transform="translate(111 15) scale(.88)"/>
+    <use href="#box" transform="translate(184 15) scale(.88)"/>
+  </g>
+  <g id="screen">
+    <path d="M99 160V181M71 184H152" stroke="#7d94b1" stroke-width="9" stroke-linecap="round"/>
+    <rect x="0" y="0" width="224" height="164" rx="16" fill="#ffffff" stroke="#7592b9" stroke-width="3"/>
+    <path d="M0 30H224" stroke="#d8e2f0" stroke-width="2"/>
+    <g fill="#bccce2"><circle cx="17" cy="15" r="4"/><circle cx="31" cy="15" r="4"/><circle cx="45" cy="15" r="4"/></g>
+    <rect x="13" y="43" width="40" height="105" rx="6" fill="#e8f0ff"/>
+    <g stroke="#9bb7e5" stroke-width="5" stroke-linecap="round"><path d="M24 58H42M24 77H42M24 96H37M24 115H42"/></g>
+    <rect x="64" y="43" width="146" height="52" rx="7" fill="#f1f6ff"/>
+    <path d="M73 78L94 73L112 82L131 56L146 66L161 59L178 63L199 50" fill="none" stroke="#3877de" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="64" y="106" width="63" height="42" rx="7" fill="#eef7f3"/>
+    <path d="M79 126L89 136L113 115" stroke="#32a486" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#a8c4ef"><rect x="138" y="127" width="14" height="21" rx="3"/><rect x="162" y="117" width="14" height="31" rx="3"/><rect x="186" y="106" width="14" height="42" rx="3"/></g>
+  </g>
+  <g id="shield"><path d="M68 0C94 16 117 21 135 22V77C132 116 111 145 68 169C25 145 4 116 1 77V22C20 21 45 15 68 0Z" fill="#e4f5f0" stroke="#38a486" stroke-width="4"/><path d="M35 77L59 101L104 52" fill="none" stroke="#21967a" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></g>
+</defs><rect width="1440" height="620" rx="28" fill="#f7f9fd"/><g font-family="Noto Sans CJK SC, sans-serif">
+  <g fill="#eaf0fb"><ellipse cx="192" cy="253" rx="128" ry="15"/><ellipse cx="544" cy="253" rx="115" ry="15"/><ellipse cx="896" cy="253" rx="128" ry="15"/><ellipse cx="1248" cy="253" rx="124" ry="15"/></g>
+  <g transform="translate(67 92)"><use href="#conveyor"/></g>
+  <g transform="translate(103 35)" filter="url(#shadow)"><rect width="154" height="91" rx="13" fill="#ffffff" stroke="#a8bedc" stroke-width="2"/><path d="M12 59H35L44 28L56 73L68 44H97" stroke="#4383df" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M128 16L109 44H123L116 70L143 35H130Z" fill="#e7b458"/></g>
+  <path d="M337 171H393" stroke="#8195b5" stroke-width="3.5" fill="none" marker-end="url(#arrow)"/>
+  <g transform="translate(452 53)" filter="url(#shadow)"><rect x="0" y="20" width="146" height="183" rx="13" fill="#fff" stroke="#abc1df" stroke-width="2"/><rect x="39" y="8" width="68" height="24" rx="8" fill="#bfd3ee"/><g stroke="#b4c6df" stroke-width="6" stroke-linecap="round"><path d="M22 65H111M22 93H102M22 121H93M22 149H85"/></g><use href="#shield" transform="translate(71 46) scale(.8)"/></g>
+  <path d="M689 171H745" stroke="#8195b5" stroke-width="3.5" fill="none" marker-end="url(#arrow)"/>
+  <g transform="translate(771 92)"><use href="#conveyor"/></g>
+  <g transform="translate(847 49)" filter="url(#shadow)"><circle cx="49" cy="49" r="48" fill="url(#blue)"/><path d="M38 26L70 49L38 72Z" fill="#fff"/></g>
+  <path d="M941 223H981M971 214L981 223L971 232" stroke="#4f8ce8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M1041 171H1097" stroke="#8195b5" stroke-width="3.5" fill="none" marker-end="url(#arrow)"/>
+  <g transform="translate(1136 60)" filter="url(#shadow)"><use href="#screen"/></g>
+  <g transform="translate(1322 209)"><circle r="29" fill="#e9f7f2" stroke="#74bba7" stroke-width="2"/><path d="M-14 0L-3 11L16-12" fill="none" stroke="#259a7d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="192" y="320" font-size="34" font-weight="650" fill="#243951" text-anchor="middle">查询状态</text><text x="544" y="320" font-size="34" font-weight="650" fill="#243951" text-anchor="middle">核对条件</text><text x="896" y="320" font-size="34" font-weight="650" fill="#243951" text-anchor="middle">恢复输送</text><text x="1248" y="320" font-size="34" font-weight="650" fill="#243951" text-anchor="middle">核对反馈</text>
+  <g fill="none" stroke-width="3"><path d="M544 346V414Q544 427 558 427H760Q775 427 775 442V460" stroke="#c3934f" marker-end="url(#amberArrow)"/><path d="M1248 346V380Q1248 395 1232 395H875Q860 395 860 413V460" stroke="#c3934f" stroke-dasharray="7 7" marker-end="url(#amberArrow)"/><path d="M1282 346V460" stroke="#36a487" marker-end="url(#greenArrow)"/></g>
+  <text x="605" y="386" font-size="27" font-weight="650" fill="#96703c" text-anchor="middle">不满足</text><text x="1037" y="383" font-size="27" font-weight="650" fill="#96703c" text-anchor="middle">未确认</text><text x="1340" y="409" font-size="27" font-weight="650" fill="#29876e" text-anchor="middle">已确认</text>
+  <rect x="653" y="474" width="330" height="104" rx="22" fill="#fff5e5"/>
+  <g transform="translate(698 525)"><circle r="20" stroke="#b1874d" stroke-width="5" fill="none"/><path d="M15 15L30 30" stroke="#b1874d" stroke-width="7" stroke-linecap="round"/><path d="M-7 0H7M0-7V7" stroke="#b1874d" stroke-width="3" stroke-linecap="round"/></g>
+  <text x="850" y="538" font-size="32" font-weight="650" fill="#8d6834" text-anchor="middle">继续核查</text>
+  <rect x="1098" y="474" width="304" height="104" rx="22" fill="#e7f5ef"/>
+  <g transform="translate(1118 497) scale(.75)"><use href="#box"/><circle cx="59" cy="50" r="16" fill="#2d9f80"/><path d="M51 50L57 56L68 43" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="1282" y="538" font-size="32" font-weight="650" fill="#287e65" text-anchor="middle">产出恢复</text>
+</g></svg>

@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RecoveryActionResult v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "operation_id",
+    "request_id",
+    "device_id",
+    "action",
+    "execution_mode",
+    "status",
+    "reason_code",
+    "message",
+    "started_at",
+    "finished_at",
+    "post_state"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "operation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{8,80}$"
+    },
+    "device_id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9-]{1,31}$"
+    },
+    "action": {
+      "enum": [
+        "resume_conveyor",
+        "start_cooling"
+      ]
+    },
+    "execution_mode": {
+      "enum": [
+        "dry_run",
+        "live"
+      ]
+    },
+    "status": {
+      "enum": [
+        "accepted",
+        "confirmed",
+        "already_satisfied",
+        "rejected",
+        "failed",
+        "unknown"
+      ]
+    },
+    "reason_code": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9_]*$"
+    },
+    "message": {
+      "type": "string",
+      "minLength": 1
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "finished_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "post_state": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "device-state.schema.json"
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "confirmed",
+              "already_satisfied"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "finished_at": {
+            "type": "string"
+          },
+          "post_state": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "execution_mode": {
+            "const": "dry_run"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "post_state": {
+            "if": {
+              "type": "object"
+            },
+            "then": {
+              "properties": {
+                "source": {
+                  "const": "demo_backend"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "execution_mode": {
+            "const": "live"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "post_state": {
+            "if": {
+              "type": "object"
+            },
+            "then": {
+              "properties": {
+                "source": {
+                  "const": "live_backend"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

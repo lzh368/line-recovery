@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_202",
+  "event_source_group": "operator_restarted",
+  "image_source_group": "test_b",
+  "split": "test"
+}

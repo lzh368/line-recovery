@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1",
+  "dataset_version": "example-v0.1",
+  "case_id": "lr_001",
+  "device_id": "CV-01",
+  "synthetic": true,
+  "window_start": "2026-09-15T09:00:00+08:00",
+  "window_end": "2026-09-15T09:02:00+08:00",
+  "sample_interval_s": 1,
+  "requested_task": "生产中的输送段突然停止。操作人员反馈刚才短时停电、现在已来电，但输送带仍没动。请根据资料核对停机经过与恢复条件；如需操作，先查询最新可信状态，按许可请求恢复，并核验后续反馈。",
+  "collection": {
+    "telemetry_complete": true,
+    "events_complete": true,
+    "images_are_video": false,
+    "missing_fields": [],
+    "uploaded_state_is_live_authority": false
+  },
+  "input_files": [
+    "device.json",
+    "device_state.json",
+    "data_dictionary.json",
+    "operating_guide.md",
+    "telemetry.csv",
+    "events.jsonl",
+    "images.json"
+  ]
+}

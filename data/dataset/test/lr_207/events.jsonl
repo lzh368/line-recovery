@@ -1,0 +1,14 @@
+{"event_id": "E001", "timestamp": "2026-09-08T12:32:00+08:00", "source": "MES", "level": "INFO", "code": "ORDER_SNAPSHOT", "message": "导出开始时工单处于生产阶段；本记录不是整个时段的连续任务证明。"}
+{"event_id": "E002", "timestamp": "2026-09-08T12:32:09+08:00", "source": "PLC", "level": "INFO", "code": "POWER_SAMPLE", "message": "该时点采集值：{\"upstream_power_available\": 1, \"drive_power_enabled\": 1, \"drive_supply_voltage_v\": 23.9, \"drive_ready\": 1}"}
+{"event_id": "E003", "timestamp": "2026-09-08T12:32:15+08:00", "source": "PLC", "level": "INFO", "code": "TEMPERATURE_SAMPLE", "message": "该时点采集值：{\"cabinet_temperature_c\": 34.06, \"thermal_pause_active\": 0, \"temperature_recovery_ready\": 1}"}
+{"event_id": "E004", "timestamp": "2026-09-08T12:32:19+08:00", "source": "PLC", "level": "INFO", "code": "COUNTER_SAMPLE", "message": "该时点采集值：{\"infeed_count_total\": 5924, \"outfeed_count_total\": 5921, \"manual_removed_count_total\": 0}"}
+{"event_id": "E005", "timestamp": "2026-09-08T12:32:46+08:00", "source": "IO", "level": "WARN", "code": "SUPPLY_VALID_FALL", "message": "上游电源有效反馈下降，驱动支路电压低于1V；撤销运行与上料请求。"}
+{"event_id": "E006", "timestamp": "2026-09-08T12:32:48+08:00", "source": "ENCODER", "level": "INFO", "code": "SPEED_ZERO", "message": "编码器反馈进入停稳范围。"}
+{"event_id": "E007", "timestamp": "2026-09-08T12:33:37+08:00", "source": "PLC", "level": "INFO", "code": "MODE_SAMPLE", "message": "该时点采集值：{\"operating_mode\": \"AUTO\", \"production_requested\": 1}"}
+{"event_id": "E008", "timestamp": "2026-09-08T12:33:41+08:00", "source": "PLC", "level": "INFO", "code": "INTERLOCK_SAMPLE", "message": "该时点采集值：{\"emergency_stop_active\": 0, \"maintenance_lockout\": 0, \"guard_closed\": 1, \"zone_clear\": 1}"}
+{"event_id": "E009", "timestamp": "2026-09-08T12:33:43+08:00", "source": "IO", "level": "INFO", "code": "SUPPLY_VALID_RISE", "message": "上游与驱动支路供电恢复；来电不自动产生新的运行请求。"}
+{"event_id": "E010", "timestamp": "2026-09-08T12:33:53+08:00", "source": "PLC", "level": "INFO", "code": "PERMISSION_SAMPLE", "message": "该时点采集值：{\"run_resume_permitted\": 0, \"cooling_control_permitted\": 1}"}
+{"event_id": "E011", "timestamp": "2026-09-08T12:33:55+08:00", "source": "DRIVE", "level": "INFO", "code": "DRIVE_READY", "message": "驱动就绪反馈上升；运动由独立的运行请求控制。"}
+{"event_id": "E012", "timestamp": "2026-09-08T12:33:55+08:00", "source": "CAMERA", "level": "INFO", "code": "FRAME_SAVED", "message": "保存 images/frame_001.png，只有单帧物料视图，没有连续视频。"}
+{"event_id": "E013", "timestamp": "2026-09-08T12:33:58+08:00", "source": "PLC", "level": "INFO", "code": "DRIVE_SAMPLE", "message": "该时点采集值：{\"run_command\": 0, \"belt_speed_m_s\": 0, \"drive_ready\": 1}"}
+{"event_id": "E014", "timestamp": "2026-09-08T12:34:00+08:00", "source": "HISTORIAN", "level": "INFO", "code": "EXPORT_END", "message": "上传窗口结束；任何后续设备操作均须重新查询工具状态。"}

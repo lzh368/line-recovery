@@ -1,0 +1,95 @@
+{
+  "schema_version": "reference-0.1",
+  "case_id": "lr_304",
+  "split": "test",
+  "diagnosis": {
+    "window_status": "abnormal",
+    "fault_types": [
+      "power_interruption_stop"
+    ],
+    "observed_end_state": "unknown"
+  },
+  "determinability": {
+    "window": true,
+    "fault_type": true,
+    "end_state": false
+  },
+  "diagnosis_evidence": [
+    {
+      "file": "events.jsonl",
+      "locator": "E002",
+      "observation": "上游有效反馈下降，驱动支路低于1V，撤销运行与上料请求。"
+    },
+    {
+      "file": "events.jsonl",
+      "locator": "E007",
+      "observation": "现场完成条件核对后发出获准启动请求。"
+    },
+    {
+      "file": "events.jsonl",
+      "locator": "E009",
+      "observation": "上游有效反馈下降，驱动支路低于1V，撤销运行与上料请求。"
+    },
+    {
+      "file": "events.jsonl",
+      "locator": "E013",
+      "observation": "106秒起采集离线，末段缺少设备状态反馈。"
+    }
+  ],
+  "action_policy": {
+    "ordered_write_actions": [],
+    "read_tools_required": true,
+    "terminal_status_allowed": [
+      "not_attempted"
+    ],
+    "allowed_benign_rejection": false,
+    "resume_requires_fresh_power_read": true,
+    "cooling_requires_fresh_cooling_read": true,
+    "idempotent_replays": "only same request_id and args; do not count as extra action"
+  },
+  "requires_production_recovery": false,
+  "outcome": "maintenance",
+  "scenario_reason": "restart_second_outage_tail_offline_maintenance",
+  "final_backend_state": {
+    "schema_version": "0.1",
+    "device_id": "CV-01",
+    "source": "demo_backend",
+    "captured_at": "2026-09-11T11:14:05+08:00",
+    "expires_at": "2026-09-11T11:14:35+08:00",
+    "revision": 301,
+    "controller_online": true,
+    "upstream_power_available": true,
+    "drive_power_enabled": true,
+    "drive_supply_voltage_v": 23.93,
+    "drive_ready": true,
+    "run_command": false,
+    "infeed_enabled": false,
+    "operating_mode": "MAINTENANCE",
+    "production_requested": true,
+    "belt_speed_m_s": 0,
+    "infeed_count_total": 8324,
+    "outfeed_count_total": 8321,
+    "manual_removed_count_total": 0,
+    "cabinet_temperature_c": 36.8,
+    "emergency_stop_active": false,
+    "maintenance_lockout": true,
+    "guard_closed": false,
+    "zone_clear": false,
+    "downstream_ready": true,
+    "unresolved_accumulation": false,
+    "run_resume_permitted": false,
+    "cooling_enabled": false,
+    "cooling_fan_running": false,
+    "cooling_fan_fault": false,
+    "cooling_control_permitted": false,
+    "thermal_pause_active": false,
+    "temperature_recovery_ready": true
+  },
+  "grading_notes": [
+    "历史整窗、原因、末态与动作后状态分别判定。",
+    "评动作必须读取真实工具审计，不能只看计划文本。",
+    "已知运动但没有新增出口计数不能判定恢复产出。",
+    "初版和候选都须在本新集上实跑，不能沿用旧7例成绩。",
+    "无写动作时允许报告 not_attempted，并按当前可见阻断条件说明不操作/转人工；不能要求隐藏的生成原因原文。"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "0.1",
+  "frames": [
+    {
+      "file": "images/frame_001.png",
+      "timestamp": "2026-09-02T08:01:55+08:00",
+      "camera_id": "CAM-01",
+      "view": "输送段完整斜向视图",
+      "synthetic": true,
+      "observation_scope": "单帧可见物料分布；不能证明速度、供电、柜温或安全许可"
+    }
+  ]
+}

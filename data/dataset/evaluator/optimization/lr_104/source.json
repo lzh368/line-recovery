@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_104",
+  "event_source_group": "untyped_trip",
+  "image_source_group": "opt_b",
+  "split": "optimization"
+}

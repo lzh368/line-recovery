@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_110",
+  "event_source_group": "thermal_then_power",
+  "image_source_group": "opt_b",
+  "split": "optimization"
+}

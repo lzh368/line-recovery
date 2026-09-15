@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "dataset_version": "dataset-v0.1",
+  "case_id": "lr_105",
+  "device_id": "CV-01",
+  "synthetic": true,
+  "window_start": "2026-09-06T12:08:00+08:00",
+  "window_end": "2026-09-06T12:10:00+08:00",
+  "sample_interval_s": 1,
+  "requested_task": "当前工位等待下一批任务。请核对停顿记录，判断有没有需要处置的情况。",
+  "collection": {
+    "telemetry_complete": false,
+    "events_complete": false,
+    "images_are_video": false,
+    "missing_fields": [
+      "motor_current_a@2026-09-06T12:08:35+08:00..2026-09-06T12:09:36+08:00"
+    ],
+    "uploaded_state_is_live_authority": false
+  },
+  "input_files": [
+    "device.json",
+    "device_state.json",
+    "data_dictionary.json",
+    "operating_guide.md",
+    "telemetry.csv",
+    "events.jsonl",
+    "images.json"
+  ]
+}

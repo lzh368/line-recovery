@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_103",
+  "event_source_group": "maintenance_after_power",
+  "image_source_group": "opt_a",
+  "split": "optimization"
+}

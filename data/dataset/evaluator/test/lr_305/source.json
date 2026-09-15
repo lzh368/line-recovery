@@ -1,0 +1,9 @@
+{
+  "case_id": "lr_305",
+  "split": "test",
+  "event_source_group": "test-v02-missing_transition_live_motion_no_counter_feedback",
+  "image_source_group": "test-v02-base_a",
+  "event_design_kind": "new_event_chain_and_backend_combination",
+  "source_case_ids": [],
+  "new_images_not_derived_from_old_inputs": true
+}

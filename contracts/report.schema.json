@@ -1,0 +1,288 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LineRecoveryReport v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "case_id",
+    "device_id",
+    "diagnosis",
+    "recovery",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^lr_[0-9]{3}$"
+    },
+    "device_id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9-]{1,31}$"
+    },
+    "diagnosis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "window_status",
+        "fault_types",
+        "observed_end_state",
+        "summary",
+        "evidence",
+        "recommendations"
+      ],
+      "properties": {
+        "window_status": {
+          "enum": [
+            "normal",
+            "abnormal",
+            "insufficient_evidence"
+          ]
+        },
+        "fault_types": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "power_interruption_stop",
+              "cabinet_overtemperature_pause"
+            ]
+          }
+        },
+        "observed_end_state": {
+          "enum": [
+            "running",
+            "stopped",
+            "unknown"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "recommendations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "fault_types": {
+                "minItems": 1
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "window_status": {
+                "const": "abnormal"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "recovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision",
+        "status",
+        "summary",
+        "operations",
+        "latest_state"
+      ],
+      "properties": {
+        "decision": {
+          "enum": [
+            "no_action",
+            "request_recovery",
+            "human_required",
+            "insufficient_evidence"
+          ]
+        },
+        "status": {
+          "enum": [
+            "not_attempted",
+            "requested",
+            "cooling_started",
+            "temperature_ready",
+            "running_confirmed",
+            "production_confirmed",
+            "rejected",
+            "failed",
+            "unknown"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "$ref": "action-result.schema.json"
+          }
+        },
+        "latest_state": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "device-state.schema.json"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "not_attempted"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "operations": {
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "cooling_started",
+                  "temperature_ready",
+                  "running_confirmed",
+                  "production_confirmed"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "latest_state": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "latest_state": {
+              "if": {
+                "type": "object"
+              },
+              "then": {
+                "properties": {
+                  "source": {
+                    "enum": [
+                      "demo_backend",
+                      "live_backend"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "diagnosis": {
+            "properties": {
+              "window_status": {
+                "const": "insufficient_evidence"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "limitations": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "diagnosis": {
+            "properties": {
+              "observed_end_state": {
+                "const": "unknown"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "limitations": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file",
+        "locator",
+        "observation"
+      ],
+      "properties": {
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observation": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

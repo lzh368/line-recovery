@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_201",
+  "event_source_group": "cooling_missing_stability",
+  "image_source_group": "test_a",
+  "split": "test"
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1",
+  "dataset_version": "dataset-v0.1",
+  "case_id": "lr_207",
+  "device_id": "CV-01",
+  "synthetic": true,
+  "window_start": "2026-09-08T12:32:00+08:00",
+  "window_end": "2026-09-08T12:34:00+08:00",
+  "sample_interval_s": 1,
+  "requested_task": "现场反馈已经来电，但设备就绪反馈较慢。请先核对当前状态，处理后确认实际结果。",
+  "collection": {
+    "telemetry_complete": true,
+    "events_complete": true,
+    "images_are_video": false,
+    "missing_fields": [],
+    "uploaded_state_is_live_authority": false
+  },
+  "input_files": [
+    "device.json",
+    "device_state.json",
+    "data_dictionary.json",
+    "operating_guide.md",
+    "telemetry.csv",
+    "events.jsonl",
+    "images.json"
+  ]
+}

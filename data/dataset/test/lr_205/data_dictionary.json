@@ -1,0 +1,158 @@
+{
+  "csv_encoding": "UTF-8",
+  "separator": ",",
+  "missing_value": "CSV empty / JSON null = unknown",
+  "fields": [
+    {
+      "name": "timestamp",
+      "unit": null,
+      "description": "ISO 8601 含时区；采样间隔 1 秒"
+    },
+    {
+      "name": "controller_online",
+      "unit": null,
+      "description": "1=控制器在线，使用独立供电"
+    },
+    {
+      "name": "upstream_power_available",
+      "unit": null,
+      "description": "1=上游 24 V 电源可用，与驱动支路是否接通不同"
+    },
+    {
+      "name": "drive_power_enabled",
+      "unit": null,
+      "description": "1=驱动支路供电输出使能；不是电量百分比"
+    },
+    {
+      "name": "drive_supply_voltage_v",
+      "unit": "V",
+      "description": "驱动支路实测电压"
+    },
+    {
+      "name": "drive_ready",
+      "unit": null,
+      "description": "1=驱动反馈就绪"
+    },
+    {
+      "name": "run_command",
+      "unit": null,
+      "description": "1=运行请求有效；0 不代表没有生产需求"
+    },
+    {
+      "name": "infeed_enabled",
+      "unit": null,
+      "description": "1=允许新箱进入"
+    },
+    {
+      "name": "operating_mode",
+      "unit": null,
+      "description": "AUTO/PLANNED_STOP/MAINTENANCE/UNKNOWN"
+    },
+    {
+      "name": "production_requested",
+      "unit": null,
+      "description": "1=当前生产任务要求继续生产；不代表恢复授权"
+    },
+    {
+      "name": "belt_speed_m_s",
+      "unit": "m/s",
+      "description": "实际带速；断电后可能短时滑行"
+    },
+    {
+      "name": "motor_current_a",
+      "unit": "A",
+      "description": "驱动电机电流；停机为零不单独构成故障"
+    },
+    {
+      "name": "infeed_count_total",
+      "unit": "cartons",
+      "description": "PLC 累计入口过箱计数，含窗口开始前的数量"
+    },
+    {
+      "name": "outfeed_count_total",
+      "unit": "cartons",
+      "description": "PLC 累计出口过箱计数，人工搬移不计产出"
+    },
+    {
+      "name": "manual_removed_count_total",
+      "unit": "cartons",
+      "description": "授权人员登记的人工移出累计"
+    },
+    {
+      "name": "cabinet_temperature_c",
+      "unit": "°C",
+      "description": "驱动柜温度，本轮仅与公开参考范围对照"
+    },
+    {
+      "name": "emergency_stop_active",
+      "unit": null,
+      "description": "1=急停生效"
+    },
+    {
+      "name": "maintenance_lockout",
+      "unit": null,
+      "description": "1=维护锁定生效，禁止自动解除"
+    },
+    {
+      "name": "guard_closed",
+      "unit": null,
+      "description": "1=防护回路闭合；不等于已获启动许可"
+    },
+    {
+      "name": "zone_clear",
+      "unit": null,
+      "description": "1=控制器区域条件合格；不能由一张图片代替"
+    },
+    {
+      "name": "downstream_ready",
+      "unit": null,
+      "description": "1=下游接口允许接收"
+    },
+    {
+      "name": "unresolved_accumulation",
+      "unit": null,
+      "description": "1=控制器记录尚有未解决积聚，0=未记录；仍需其他证据对照"
+    },
+    {
+      "name": "run_resume_permitted",
+      "unit": null,
+      "description": "运行恢复许可的历史记录；上传值不提供当前执行授权"
+    },
+    {
+      "name": "cooling_enabled",
+      "unit": null,
+      "description": "独立柜内风机的命令，1=开启"
+    },
+    {
+      "name": "cooling_fan_running",
+      "unit": null,
+      "description": "独立风机实际运行反馈，1=已运行"
+    },
+    {
+      "name": "cooling_fan_fault",
+      "unit": null,
+      "description": "风机控制器故障反馈"
+    },
+    {
+      "name": "cooling_control_permitted",
+      "unit": null,
+      "description": "独立风机控制许可；上传记录不是授权"
+    },
+    {
+      "name": "thermal_pause_active",
+      "unit": null,
+      "description": "温控暂停保持状态，需连续温度恢复条件满足才可撤销"
+    },
+    {
+      "name": "temperature_recovery_ready",
+      "unit": null,
+      "description": "控制器按连续有效温度计算的恢复就绪状态"
+    }
+  ],
+  "state_only_fields": {
+    "source": "uploaded_snapshot/ demo_backend/ live_backend；快照不构成执行授权",
+    "captured_at": "状态采集时间",
+    "expires_at": "后端判断的新鲜度上限",
+    "revision": "后端维护的状态版本，写调用前必须重新查询并匹配"
+  }
+}

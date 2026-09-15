@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "dataset_version": "dataset-v0.1",
+  "case_id": "lr_109",
+  "device_id": "CV-01",
+  "synthetic": true,
+  "window_start": "2026-09-10T10:16:00+08:00",
+  "window_end": "2026-09-10T10:18:00+08:00",
+  "sample_interval_s": 1,
+  "requested_task": "本次停顿附近的采集不完整，原因尚未登记。请核对现有资料，必要时请求补充。",
+  "collection": {
+    "telemetry_complete": false,
+    "events_complete": false,
+    "images_are_video": false,
+    "missing_fields": [
+      "upstream_power_available,drive_power_enabled,drive_supply_voltage_v,drive_ready,production_requested,operating_mode@2026-09-10T10:16:20+08:00..2026-09-10T10:17:30+08:00"
+    ],
+    "uploaded_state_is_live_authority": false
+  },
+  "input_files": [
+    "device.json",
+    "device_state.json",
+    "data_dictionary.json",
+    "operating_guide.md",
+    "telemetry.csv",
+    "events.jsonl",
+    "images.json"
+  ]
+}

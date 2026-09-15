@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>产线恢复助手 · 停机核对与受控恢复</title>
+  <meta name="description" content="读取上传的资料包，核对停机经过与恢复条件并给出带证据的判断；需要动作时先查询最新可信状态，再由后端请求执行并记录审计。" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <nav class="top">
+    <div class="brand"><span class="mark" aria-hidden="true">LR</span><span>产线恢复助手</span></div>
+    <span class="pill" id="pill-tools"><span class="dot" aria-hidden="true"></span><span id="pill-tools-text">检查工具状态…</span></span>
+    <span class="pill" id="pill-model"><span class="dot" aria-hidden="true"></span><span id="pill-model-text">检查模型…</span></span>
+    <span class="pill" id="pill-mode">执行模式未知</span>
+    <span class="spacer"></span>
+    <button id="theme-toggle" type="button" aria-pressed="false" title="切换深浅色">深色模式</button>
+  </nav>
+
+  <main class="shell">
+    <aside class="stack">
+      <section class="card">
+        <h3>案例</h3>
+        <p class="hint">资料只读；设备动作只会出现在后端审计里。</p>
+        <div id="case-list" class="stack"></div>
+        <div id="case-list-empty" class="faint">还没有案例，先载入 example 或上传 ZIP。</div>
+        <div class="row" style="margin-top: 12px">
+          <button id="load-example" class="primary" type="button">载入 example</button>
+          <button id="refresh-cases" class="link" type="button">刷新列表</button>
+        </div>
+        <div id="case-list-msg" class="faint" role="status"></div>
+      </section>
+
+      <section class="card">
+        <h3>上传资料包</h3>
+        <p class="hint">ZIP 根目录直接含 request.json；绝对路径、<code>../</code> 与软链接会被拒绝。</p>
+        <div class="stack">
+          <input id="case-label" type="text" placeholder="可选：给这个案例起个名字" autocomplete="off" />
+          <input id="zip-input" type="file" accept=".zip,application/zip" />
+          <button id="upload" type="button" disabled>上传并解析</button>
+          <div id="upload-msg" class="faint" role="status"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>设备工具</h3>
+        <p class="hint">动作由后端经 MCP 客户端执行；没有可运行的服务进程时保持“工具未连接”。</p>
+        <div id="tools-panel" class="stack"></div>
+      </section>
+
+      <section class="card">
+        <h3>模型</h3>
+        <div id="model-panel" class="stack"></div>
+      </section>
+
+      <section class="card">
+        <h3>运行信息</h3>
+        <dl class="kv" id="runtime-info"></dl>
+      </section>
+    </aside>
+
+    <section class="pane">
+      <div class="empty" id="empty-state">
+        <div class="eyebrow">产线恢复助手</div>
+        <h2>先载入一份资料包</h2>
+        <p>助手核对窗口内的停机经过与恢复条件，给出带证据的判断；需要动作时先查询最新可信状态，再向后端请求执行，并把“命令受理”“设备动作”“产出恢复”分阶段呈现。</p>
+        <div class="examples">
+          <button type="button" data-demo="example"><span class="num">example · lr_001</span>载入仓库示例：复电后输送仍未恢复</button>
+          <button type="button" data-demo="upload"><span class="num">ZIP</span>上传自己的资料包（request.json 在根目录）</button>
+          <button type="button" data-demo="tools"><span class="num">工具状态</span>查看两个设备接口的连接状态</button>
+          <button type="button" data-demo="model"><span class="num">模型</span>检查诊断所需模型是否已配置</button>
+        </div>
+      </div>
+
+      <div id="workspace" hidden>
+        <div class="row between" style="margin-bottom: 12px">
+          <div>
+            <div class="eyebrow">当前案例</div>
+            <h2 id="case-title">—</h2>
+            <div class="row" id="case-badges" style="margin-top: 6px"></div>
+          </div>
+          <button id="delete-case" type="button" hidden>删除该上传案例</button>
+        </div>
+
+        <div class="tabs" role="tablist" id="tabs">
+          <button role="tab" type="button" data-tab="overview" aria-selected="true" aria-controls="tab-overview">资料总览</button>
+          <button role="tab" type="button" data-tab="telemetry" aria-selected="false" aria-controls="tab-telemetry">时序数据</button>
+          <button role="tab" type="button" data-tab="events" aria-selected="false" aria-controls="tab-events">控制器日志</button>
+          <button role="tab" type="button" data-tab="images" aria-selected="false" aria-controls="tab-images">工位图片</button>
+          <button role="tab" type="button" data-tab="diagnosis" aria-selected="false" aria-controls="tab-diagnosis">诊断与证据</button>
+          <button role="tab" type="button" data-tab="actions" aria-selected="false" aria-controls="tab-actions">动作与反馈</button>
+        </div>
+
+        <div class="stack">
+          <div id="tab-overview" role="tabpanel" data-panel="overview"></div>
+          <div id="tab-telemetry" role="tabpanel" data-panel="telemetry" hidden></div>
+          <div id="tab-events" role="tabpanel" data-panel="events" hidden></div>
+          <div id="tab-images" role="tabpanel" data-panel="images" hidden></div>
+          <div id="tab-diagnosis" role="tabpanel" data-panel="diagnosis" hidden></div>
+          <div id="tab-actions" role="tabpanel" data-panel="actions" hidden></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

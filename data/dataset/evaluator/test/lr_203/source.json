@@ -1,0 +1,6 @@
+{
+  "case_id": "lr_203",
+  "event_source_group": "revision_race_power",
+  "image_source_group": "test_a",
+  "split": "test"
+}

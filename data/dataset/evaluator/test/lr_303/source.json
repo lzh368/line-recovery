@@ -1,0 +1,9 @@
+{
+  "case_id": "lr_303",
+  "split": "test",
+  "event_source_group": "test-v02-batch_hold_isolation_missing_zone",
+  "image_source_group": "test-v02-base_a",
+  "event_design_kind": "new_event_chain_and_backend_combination",
+  "source_case_ids": [],
+  "new_images_not_derived_from_old_inputs": true
+}

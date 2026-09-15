@@ -1,0 +1,14 @@
+{"event_id": "E001", "timestamp": "2026-09-15T09:00:00+08:00", "source": "MES", "level": "INFO", "code": "TASK_ACTIVE", "message": "当前任务处于生产阶段，窗口内没有计划停顿或换型安排。"}
+{"event_id": "E002", "timestamp": "2026-09-15T09:00:01+08:00", "source": "PLC", "level": "INFO", "code": "COUNTER_BASE", "message": "入口累计1003，出口累计1000，人工移出累计0；无未登记旁路。"}
+{"event_id": "E003", "timestamp": "2026-09-15T09:00:02+08:00", "source": "PLC", "level": "INFO", "code": "POWER_CHANNEL_READBACK", "message": "控制器独立供电在线，上游电源可用，驱动支路输出使能有效。"}
+{"event_id": "E004", "timestamp": "2026-09-15T09:00:03+08:00", "source": "PLC", "level": "INFO", "code": "OPERATING_PROFILE", "message": "当前输送目标0.4 m/s，正常过箱节拍约2 s/箱。"}
+{"event_id": "E005", "timestamp": "2026-09-15T09:00:40+08:00", "source": "IO-MODULE", "level": "WARN", "code": "UPSTREAM_POWER_LOST", "message": "上游24 V电源有效反馈由1变0，驱动支路电压降至0 V；独立供电的控制器保持在线。"}
+{"event_id": "E006", "timestamp": "2026-09-15T09:00:40+08:00", "source": "PLC", "level": "WARN", "code": "DRIVE_NOT_READY", "message": "驱动就绪反馈失效，撤销运行请求和上料允许；生产任务仍有效，不自动重启。"}
+{"event_id": "E007", "timestamp": "2026-09-15T09:00:42+08:00", "source": "ENCODER", "level": "INFO", "code": "MOTION_STOPPED", "message": "带速反馈已降至停稳范围。"}
+{"event_id": "E008", "timestamp": "2026-09-15T09:01:10+08:00", "source": "IO-MODULE", "level": "INFO", "code": "POWER_RETURNED", "message": "上游电源有效反馈恢复，驱动支路电压24 V，输出使能恢复；运行请求保持撤销。"}
+{"event_id": "E009", "timestamp": "2026-09-15T09:01:10+08:00", "source": "HISTORIAN", "level": "INFO", "code": "COUNTER_SAMPLE", "message": "入口累计1022、出口累计1019、人工移出0；保持采集。"}
+{"event_id": "E010", "timestamp": "2026-09-15T09:01:12+08:00", "source": "DRIVE", "level": "INFO", "code": "READY_RETURNED", "message": "驱动重新就绪；配置禁止来电自动启动，等待新的获准运行请求。"}
+{"event_id": "E011", "timestamp": "2026-09-15T09:01:40+08:00", "source": "PLC", "level": "INFO", "code": "INTERLOCK_READBACK", "message": "急停未生效，维护锁定未生效，防护回路闭合，区域条件及下游接收反馈有效。"}
+{"event_id": "E012", "timestamp": "2026-09-15T09:01:50+08:00", "source": "CAMERA", "level": "INFO", "code": "FRAME_RETAINED", "message": "保存 images/frame_001.png 单帧；未留存连续视频。"}
+{"event_id": "E013", "timestamp": "2026-09-15T09:01:55+08:00", "source": "POLICY", "level": "INFO", "code": "PERMISSION_SNAPSHOT", "message": "该时点运行恢复许可有效，温控无暂停；任何执行仍须后端重新核验当前条件。"}
+{"event_id": "E014", "timestamp": "2026-09-15T09:02:00+08:00", "source": "HISTORIAN", "level": "INFO", "code": "EXPORT_CLOSED", "message": "本次上传资料时间窗结束，状态快照版本200；未包含后续控制操作。"}

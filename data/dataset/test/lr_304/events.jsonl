@@ -1,0 +1,14 @@
+{"timestamp": "2026-09-11T11:12:00+08:00", "source": "MES", "level": "INFO", "code": "ORDER_SNAPSHOT", "message": "导出起点保存工单状态；后续任务变化以对应时刻的记录为准。", "event_id": "E001"}
+{"timestamp": "2026-09-11T11:12:24+08:00", "source": "IO", "level": "WARN", "code": "SUPPLY_VALID_FALL", "message": "上游有效反馈下降，驱动支路低于1V，撤销运行与上料请求。", "event_id": "E002"}
+{"timestamp": "2026-09-11T11:12:26+08:00", "source": "ENCODER", "level": "INFO", "code": "SPEED_ZERO", "message": "带速进入停稳范围。", "event_id": "E003"}
+{"timestamp": "2026-09-11T11:12:41+08:00", "source": "IO", "level": "INFO", "code": "SUPPLY_VALID_RISE", "message": "上游与驱动支路供电恢复，运行请求未自动恢复。", "event_id": "E004"}
+{"timestamp": "2026-09-11T11:12:44+08:00", "source": "DRIVE", "level": "INFO", "code": "DRIVE_READY", "message": "驱动就绪反馈已有效，运行仍由独立请求控制。", "event_id": "E005"}
+{"timestamp": "2026-09-11T11:12:50+08:00", "source": "CAMERA", "level": "INFO", "code": "FRAME_SAVED", "message": "工位定点相机保存单帧 images/frame_001.png，无连续视频。", "event_id": "E006"}
+{"timestamp": "2026-09-11T11:13:06+08:00", "source": "OPERATOR", "level": "INFO", "code": "LOCAL_START_AUTHORIZED", "message": "现场完成条件核对后发出获准启动请求。", "event_id": "E007"}
+{"timestamp": "2026-09-11T11:13:12+08:00", "source": "PLC", "level": "INFO", "code": "INFEED_RELEASED", "message": "启动检查后允许上料，实际通过情况见出口计数。", "event_id": "E008"}
+{"timestamp": "2026-09-11T11:13:34+08:00", "source": "IO", "level": "WARN", "code": "SUPPLY_VALID_FALL", "message": "上游有效反馈下降，驱动支路低于1V，撤销运行与上料请求。", "event_id": "E009"}
+{"timestamp": "2026-09-11T11:13:36+08:00", "source": "ENCODER", "level": "INFO", "code": "SPEED_ZERO", "message": "带速进入停稳范围。", "event_id": "E010"}
+{"timestamp": "2026-09-11T11:13:42+08:00", "source": "IO", "level": "INFO", "code": "SUPPLY_VALID_RISE", "message": "上游与驱动支路供电恢复，运行请求未自动恢复。", "event_id": "E011"}
+{"timestamp": "2026-09-11T11:13:45+08:00", "source": "DRIVE", "level": "INFO", "code": "DRIVE_READY", "message": "驱动就绪反馈已有效，运行仍由独立请求控制。", "event_id": "E012"}
+{"timestamp": "2026-09-11T11:13:45+08:00", "source": "HISTORIAN", "level": "WARN", "code": "STREAM_LOST", "message": "106秒起采集离线，末段缺少设备状态反馈。", "event_id": "E013"}
+{"timestamp": "2026-09-11T11:14:00+08:00", "source": "HISTORIAN", "level": "INFO", "code": "EXPORT_END", "message": "资料窗口结束，后续状态须向设备接口重新查询。", "event_id": "E014"}

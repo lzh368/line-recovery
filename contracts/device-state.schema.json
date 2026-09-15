@@ -1,0 +1,238 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RecoveryDeviceState v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "device_id",
+    "source",
+    "captured_at",
+    "expires_at",
+    "revision",
+    "controller_online",
+    "upstream_power_available",
+    "drive_power_enabled",
+    "drive_supply_voltage_v",
+    "drive_ready",
+    "run_command",
+    "infeed_enabled",
+    "operating_mode",
+    "production_requested",
+    "belt_speed_m_s",
+    "infeed_count_total",
+    "outfeed_count_total",
+    "manual_removed_count_total",
+    "cabinet_temperature_c",
+    "emergency_stop_active",
+    "maintenance_lockout",
+    "guard_closed",
+    "zone_clear",
+    "downstream_ready",
+    "unresolved_accumulation",
+    "run_resume_permitted",
+    "cooling_enabled",
+    "cooling_fan_running",
+    "cooling_fan_fault",
+    "cooling_control_permitted",
+    "thermal_pause_active",
+    "temperature_recovery_ready"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "device_id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9-]{1,31}$"
+    },
+    "source": {
+      "enum": [
+        "uploaded_snapshot",
+        "demo_backend",
+        "live_backend"
+      ]
+    },
+    "captured_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "controller_online": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "upstream_power_available": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "drive_power_enabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "drive_supply_voltage_v": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "drive_ready": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "run_command": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "infeed_enabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "operating_mode": {
+      "enum": [
+        "AUTO",
+        "PLANNED_STOP",
+        "MAINTENANCE",
+        "UNKNOWN"
+      ]
+    },
+    "production_requested": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "belt_speed_m_s": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "infeed_count_total": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "outfeed_count_total": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "manual_removed_count_total": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "cabinet_temperature_c": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "emergency_stop_active": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "maintenance_lockout": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "guard_closed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "zone_clear": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "downstream_ready": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "unresolved_accumulation": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "run_resume_permitted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "cooling_enabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "cooling_fan_running": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "cooling_fan_fault": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "cooling_control_permitted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "thermal_pause_active": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "temperature_recovery_ready": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  }
+}

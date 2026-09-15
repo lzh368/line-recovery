@@ -1,0 +1,14 @@
+{"event_id": "E001", "timestamp": "2026-09-06T10:58:00+08:00", "source": "MES", "level": "INFO", "code": "ORDER_SNAPSHOT", "message": "导出开始时工单处于生产阶段；本记录不是整个时段的连续任务证明。"}
+{"event_id": "E002", "timestamp": "2026-09-06T10:58:03+08:00", "source": "PLC", "level": "INFO", "code": "GUARD_SAMPLE", "message": "该时点采集值：{\"guard_closed\": 1, \"emergency_stop_active\": 0}"}
+{"event_id": "E003", "timestamp": "2026-09-06T10:58:07+08:00", "source": "PLC", "level": "INFO", "code": "CONTROLLER_SAMPLE", "message": "该时点采集值：{\"controller_online\": 1}"}
+{"event_id": "E004", "timestamp": "2026-09-06T10:58:09+08:00", "source": "PLC", "level": "INFO", "code": "POWER_SAMPLE", "message": "该时点采集值：{\"upstream_power_available\": 1, \"drive_power_enabled\": 1, \"drive_supply_voltage_v\": 24.04, \"drive_ready\": 1}"}
+{"event_id": "E005", "timestamp": "2026-09-06T10:58:15+08:00", "source": "PLC", "level": "INFO", "code": "TEMPERATURE_SAMPLE", "message": "该时点采集值：{\"cabinet_temperature_c\": 35.12, \"thermal_pause_active\": 0, \"temperature_recovery_ready\": 1}"}
+{"event_id": "E006", "timestamp": "2026-09-06T10:58:17+08:00", "source": "PLC", "level": "INFO", "code": "FAN_SAMPLE", "message": "该时点采集值：{\"cooling_enabled\": 0, \"cooling_fan_running\": 0}"}
+{"event_id": "E007", "timestamp": "2026-09-06T10:58:19+08:00", "source": "PLC", "level": "INFO", "code": "COUNTER_SAMPLE", "message": "该时点采集值：{\"infeed_count_total\": 5410, \"outfeed_count_total\": 5407, \"manual_removed_count_total\": 0}"}
+{"event_id": "E008", "timestamp": "2026-09-06T10:59:41+08:00", "source": "PLC", "level": "INFO", "code": "INTERLOCK_SAMPLE", "message": "该时点采集值：{\"emergency_stop_active\": 0, \"maintenance_lockout\": 0, \"guard_closed\": 1, \"zone_clear\": 1}"}
+{"event_id": "E009", "timestamp": "2026-09-06T10:59:53+08:00", "source": "PLC", "level": "INFO", "code": "PERMISSION_SAMPLE", "message": "该时点采集值：{\"run_resume_permitted\": 1, \"cooling_control_permitted\": 1}"}
+{"event_id": "E010", "timestamp": "2026-09-06T10:59:55+08:00", "source": "CAMERA", "level": "INFO", "code": "FRAME_SAVED", "message": "保存 images/frame_001.png，只有单帧物料视图，没有连续视频。"}
+{"event_id": "E011", "timestamp": "2026-09-06T10:59:56+08:00", "source": "PLC", "level": "INFO", "code": "OUTFEED_SAMPLE", "message": "该时点采集值：{\"outfeed_count_total\": 5425, \"downstream_ready\": 1}"}
+{"event_id": "E012", "timestamp": "2026-09-06T10:59:58+08:00", "source": "PLC", "level": "INFO", "code": "DRIVE_SAMPLE", "message": "该时点采集值：{\"run_command\": 0, \"belt_speed_m_s\": 0, \"drive_ready\": 1}"}
+{"event_id": "E013", "timestamp": "2026-09-06T11:00:00+08:00", "source": "HISTORIAN", "level": "WARN", "code": "PARTIAL_EVENT_EXPORT", "message": "停顿附近MES/IO事件分区未导出，缺口不能按无事件处理。"}
+{"event_id": "E014", "timestamp": "2026-09-06T11:00:00+08:00", "source": "HISTORIAN", "level": "INFO", "code": "EXPORT_END", "message": "上传窗口结束；任何后续设备操作均须重新查询工具状态。"}
