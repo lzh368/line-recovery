@@ -335,7 +335,7 @@ npm start
 
 从 [line-recovery 仓库中已保存的报告](https://github.com/lzh368/line-recovery/tree/1e1f1e33d2ea55feafa89ae22895623179f68cfd/reports/experiments)可以看到，在设备状态不明确的案例中，优化后的 Agent 不再贸然请求操作；在过热停机的案例中，它能在降温后继续恢复输送，并确认产出是否恢复。
 
-可见，无论是评测分数还是具体案例中的表现，都说明 Penguin Harness 成功优化了产线 Agent，提高了产线 Agent 的效果。
+从评测分数和具体案例来看，Penguin Harness 优化后的产线巡检 Agent，在异常判断和恢复操作上都有了更好的表现。
 
 ## 5. 投入与运行成本
 
