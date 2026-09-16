@@ -1,5 +1,7 @@
 # Line Recovery · 产线恢复助手
 
+实践文章：[用 Penguin Harness 快速开发并优化产线巡检 Agent 应用](docs/penguin-harness/article.md)（[配图与 SVG 源文件](docs/penguin-harness/README.md)）。
+
 用 Penguin 制作中文应用：上传纸箱输送工位资料，分析异常；有工具侧许可时请求恢复，并依据新反馈说明结果。Penguin 已交付初版应用，两个演示 MCP 服务现已补齐并接好配置；Agent 自动调用与持续读回尚待联调。本次没有调用模型或真实设备，没有 Agent 分数。
 
 ## 两个业务故事

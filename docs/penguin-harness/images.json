@@ -1,0 +1,210 @@
+{
+  "source": "https://prismshadow.feishu.cn/wiki/PguOw7uFvi7PjjkVscFc8W2QnPc",
+  "revision": 1586,
+  "exported_at": "2026-09-16T17:38:52.859538+00:00",
+  "images": [
+    {
+      "figure": 1,
+      "caption": "图 1：来电后输送带未恢复，人工与 Agent 的处理流程示意。",
+      "path": "images/01-inspection-human-vs-agent.png",
+      "width": 2880,
+      "height": 740,
+      "sha256": "1946d524f57e9d4ce4e18d550c9b5e775293a9c16895f7c296916bc2f590f2c9",
+      "svg": "diagrams/inspection-human-vs-agent.svg"
+    },
+    {
+      "figure": 2,
+      "caption": "图 2：Penguin Harness 开发与优化产线巡检 Agent。",
+      "path": "images/02-penguin-develops-inspection-agent.png",
+      "width": 2880,
+      "height": 1120,
+      "sha256": "d44f4565beddfece60cf6e8b11689fc6544ca2ec6b07240312fd26bcda0e6442",
+      "svg": "diagrams/penguin-develops-inspection-agent.svg"
+    },
+    {
+      "figure": 3,
+      "caption": "图 3：客户端下载页：按操作系统选择安装包。",
+      "path": "images/03-01-download.png",
+      "width": 2160,
+      "height": 1230,
+      "sha256": "78765bd54e48e6c678fb20860cf0285b6347d66fbbc99edda83e07348761ab2c"
+    },
+    {
+      "figure": 4,
+      "caption": "图 4：Penguin Harness 主界面，左侧为“模型库”入口。",
+      "path": "images/04-02-home.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "705c1990287852e3c4167e84ae2de6f008d4307ebe2f6a14b70b606886c08aa6"
+    },
+    {
+      "figure": 5,
+      "caption": "图 5：DeepSeek Flash 模型配置：填写 API Key、API 地址和模型 ID。密钥已遮挡。",
+      "path": "images/05-04-api-settings.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "09ca86f3734e895188654098b515fa935989d4d64b1605a09fe167b02bf84819"
+    },
+    {
+      "figure": 6,
+      "caption": "图 6：模型库中的 DeepSeek Flash；“默认”标签表示当前默认模型。",
+      "path": "images/06-05-model-list.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "185660c5e6ab1117e9fc9635bea6707424433c47d01fa7a2982bdb76250cc219"
+    },
+    {
+      "figure": 7,
+      "caption": "图 7：在输入框右下方选择本次任务使用的模型。",
+      "path": "images/07-06-model-picker.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "3e89d8296623853432857fe33a3a37be38c1288cad5eecdbfe9bee84247305f7"
+    },
+    {
+      "figure": 8,
+      "caption": "图 8：选择项目文件夹后，点击“使用此目录”。",
+      "path": "images/08-07-workspace.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "f3eff5bd93126e7940ed50a7472d14e5f54d15b27dc76b65ef2307468066dc70"
+    },
+    {
+      "figure": 9,
+      "caption": "图 9：输入框下方的“技能”菜单，列出当前可用技能。",
+      "path": "images/09-08-skills.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "71c308cf4ffe2307f185a5f384e17476b1dc809bb89bfcb75b72672344747464"
+    },
+    {
+      "figure": 10,
+      "caption": "图 10：选定工作区并输入指令后，点击右侧箭头发送。",
+      "path": "images/10-09-send-task.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "21531b4909ea1e4d00ec78a78e15f83615d3c21ea3a95620e0c52404721131be"
+    },
+    {
+      "figure": 11,
+      "caption": "图 11：任务完成后的项目介绍与文件读取记录。",
+      "path": "images/11-10-task-result.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "9d719d8a8a8168c69d1bdeb9cca271f4c893c4c8b4a681c1ce04ae022d3e6619"
+    },
+    {
+      "figure": 12,
+      "caption": "图 12：选择 line-recovery-starter 目录作为开发工作区。",
+      "path": "images/12-11-starter-workspace.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "06936c6c45526b40cdc32d896c7e8798fa5f2c35ce6bd3d0e031061fdb8eda79"
+    },
+    {
+      "figure": 13,
+      "caption": "图 13：在技能菜单中选择 agent-initialization。",
+      "path": "images/13-14-select-skill.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "4e190631302432001dae145e1cdabdf0fdfd9bd494493b0710fb1390ac1fd67d"
+    },
+    {
+      "figure": 14,
+      "caption": "图 14：确认工作区、技能和模型后，发送完整开发指令。",
+      "path": "images/14-15-build-prompt.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "9597b19cd36777669e13306d1f8008ec4a28f5a4f54b78e561385af1707f0307"
+    },
+    {
+      "figure": 15,
+      "caption": "图 15：原项目的初始交付说明：应用框架先交付，设备接口随后继续接通。",
+      "path": "images/15-initial-delivery-cropped.png",
+      "width": 1776,
+      "height": 802,
+      "sha256": "7c594c5d2d06bedf2c1b15674b5d606345a79cb0df0ef4c9e6b3745d2719ca81"
+    },
+    {
+      "figure": 16,
+      "caption": "图 16：产线恢复助手首页，红框为资料上传入口。",
+      "path": "images/16-16-app-upload-entry.png",
+      "width": 2880,
+      "height": 1500,
+      "sha256": "e2873a49148c4b8dfe94801aa4cedff4106d097c3afccd6c25f1ad430a8cd384"
+    },
+    {
+      "figure": 17,
+      "caption": "图 17：查看案例中的工位图片。",
+      "path": "images/17-lr_101-03-photo.png",
+      "width": 2880,
+      "height": 1500,
+      "sha256": "f4e7d8be77183f7d11ff41fe53b251f90b090be08ede413399e40867f04c63e3"
+    },
+    {
+      "figure": 18,
+      "caption": "图 18：供电已经恢复，但带速仍为零。",
+      "path": "images/18-lr_101-02-telemetry.png",
+      "width": 2880,
+      "height": 1500,
+      "sha256": "6499e7509136866fc87d24105bfd87dd4f15bc882dc7153ab6e255ee59f6dbe0"
+    },
+    {
+      "figure": 19,
+      "caption": "图 19：Agent 的停机分析与对应证据。",
+      "path": "images/19-lr_101-04-diagnosis.png",
+      "width": 2880,
+      "height": 1500,
+      "sha256": "cec39e065da7a120785aff6aa6626b3bc773f0f9af94a0a654d097afb1e470b9"
+    },
+    {
+      "figure": 20,
+      "caption": "图 20：恢复输送后，带速和产出计数发生变化。",
+      "path": "images/20-lr_101-06-feedback.png",
+      "width": 2880,
+      "height": 1500,
+      "sha256": "1bd072b9c3e036c408e8f8de755ffe00edccad071201507a60f9680da8215d9e"
+    },
+    {
+      "figure": 21,
+      "caption": "图 21：Penguin Harness 评测与优化 Agent 应用。",
+      "path": "images/21-penguin-optimization-simple.png",
+      "width": 2880,
+      "height": 880,
+      "sha256": "49be01cd582c5b99802b72711808c207ad5ef948d03edb4c09200481220cb88b",
+      "svg": "diagrams/penguin-optimization-simple.svg"
+    },
+    {
+      "figure": 22,
+      "caption": "图 22：选择 line-recovery 根目录，点击“使用此目录”。",
+      "path": "images/22-21-optimization-workspace.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "fce5f238db7fec04ab784c65ce7ffac27207a41ddbc45d06e5aa30f79986660e"
+    },
+    {
+      "figure": 23,
+      "caption": "图 23：选中 agent-evaluation 和 agent-optimization，菜单中两项均显示勾选。",
+      "path": "images/23-22-optimization-skills.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "e862180fef3d630333309e35385657abe9c2fd84b3cff9bf336d1a9c3f21334d"
+    },
+    {
+      "figure": 24,
+      "caption": "图 24：填好优化指令后的待发送状态；红框为发送按钮，本次截图未启动任务。",
+      "path": "images/24-23-optimization-prompt.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "502dc737d4da4b01a5cabcecda8b6c957096783c163a05e4b5fde18a3581210d"
+    },
+    {
+      "figure": 25,
+      "caption": "图 25：优化前后成绩。训练集来自 round1；七例测试来自 gate-set-7，先取每例历史运行均分，再对七例求平均，各案例和版本的运行次数不完全相同。",
+      "path": "images/25-test-score-comparison.png",
+      "width": 2880,
+      "height": 1392,
+      "sha256": "5436edd46df046ad37118cc1f6071a4a32b936107f8c9a9681a769ee50acd7d1"
+    }
+  ]
+}

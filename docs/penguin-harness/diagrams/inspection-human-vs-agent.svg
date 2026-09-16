@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="370" viewBox="0 110 1440 370" role="img" aria-labelledby="title desc">
+  <title id="title">来电后输送带未恢复：人工与 Agent 的处理流程</title>
+  <desc id="desc">上下两行都从来电后输送带仍未运行开始。人工排查、确认许可、手动启动并检查记录。接入设备事件触发后，Agent 分析原因、通过工具查询许可和请求启动，再核验反馈并生成报告。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#84919d"/></marker>
+    <style>
+      text { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; letter-spacing: 0; }
+      .label { font-size: 30px; font-weight: 650; }
+      .step { font-size: 27px; font-weight: 550; fill: #20333f; text-anchor: middle; }
+      .human { fill: #f3f6f9; stroke: #cbd5de; stroke-width: 1.5; }
+      .agent { fill: #edf8f4; stroke: #9acdb9; stroke-width: 1.5; }
+      .start { fill: #fff7e8; stroke: #d7b66f; stroke-width: 1.5; }
+      .flow { fill: none; stroke: #84919d; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1440" height="510" fill="white"/>
+  <text x="48" y="211" class="label" fill="#3e5e78">人工处理</text>
+  <rect class="start" x="240" y="150" width="208" height="110" rx="8"/>
+  <g class="human"><rect x="472" y="150" width="208" height="110" rx="8"/><rect x="704" y="150" width="208" height="110" rx="8"/><rect x="936" y="150" width="208" height="110" rx="8"/><rect x="1168" y="150" width="208" height="110" rx="8"/></g>
+  <g class="step">
+    <text x="344" y="194" fill="#75551c">供电恢复<tspan x="344" dy="39">输送带仍未运行</tspan></text>
+    <text x="576" y="194">人员排查<tspan x="576" dy="39">停机原因</tspan></text>
+    <text x="808" y="194">人工确认<tspan x="808" dy="39">启动许可</tspan></text>
+    <text x="1040" y="194">手动请求<tspan x="1040" dy="39">启动输送</tspan></text>
+    <text x="1272" y="194">检查产出<tspan x="1272" dy="39">记录结果</tspan></text>
+  </g>
+  <g class="flow"><path d="M450 205 H467"/><path d="M682 205 H699"/><path d="M914 205 H931"/><path d="M1146 205 H1163"/></g>
+  <text x="48" y="391" class="label" fill="#21705a">Agent 处理</text>
+  <rect class="start" x="240" y="330" width="208" height="110" rx="8"/>
+  <g class="agent"><rect x="472" y="330" width="208" height="110" rx="8"/><rect x="704" y="330" width="208" height="110" rx="8"/><rect x="936" y="330" width="208" height="110" rx="8"/><rect x="1168" y="330" width="208" height="110" rx="8"/></g>
+  <g class="step">
+    <text x="344" y="374" fill="#75551c">供电恢复<tspan x="344" dy="39">输送带仍未运行</tspan></text>
+    <text x="576" y="374">Agent 分析<tspan x="576" dy="39">停机原因</tspan></text>
+    <text x="808" y="374">检查<tspan x="808" dy="39">设备状态</tspan></text>
+    <text x="1040" y="374">通过 MCP<tspan x="1040" dy="39">启动输送</tspan></text>
+    <text x="1272" y="374">核验反馈<tspan x="1272" dy="39">生成报告</tspan></text>
+  </g>
+  <g class="flow"><path d="M450 385 H467"/><path d="M682 385 H699"/><path d="M914 385 H931"/><path d="M1146 385 H1163"/></g>
+</svg>
