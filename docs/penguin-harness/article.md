@@ -257,7 +257,7 @@ npm start
 
 本次使用[产线巡检示例数据包（lr_101）](https://github.com/lzh368/line-recovery/tree/1e1f1e33d2ea55feafa89ae22895623179f68cfd/data/dataset/optimization/lr_101)，包含模拟工位的图片、运行记录和日志。下面的截图与结果来自已开发完成应用对该案例的一次运行；line-recovery-starter 自带的示例数据包和“载入 example”按钮对应的是 lr_001。
 
-将 lr_101 目录中的文件打包为 ZIP，在左侧选择文件，点击“上传并解析”，再从案例列表中选中它。点击右侧“工位图片”页签，可以查看工位和纸箱的分布。
+下载我们准备好的[产线巡检示例数据包（lr_101，ZIP 格式）](https://github.com/lzh368/line-recovery/raw/refs/heads/main/docs/penguin-harness/attachments/lr_101.zip)，在左侧选择该 ZIP 文件，点击“上传并解析”，再从案例列表中选中它。点击右侧“工位图片”页签，可以查看工位和纸箱的分布。
 
 ![图 17：查看案例中的工位图片。](images/17-lr_101-03-photo.png)
 

@@ -9,6 +9,7 @@
 - `article.md`：正文，图片使用仓库内的相对链接。
 - `images/`：文档中实际使用的图片，包含裁剪和红框标注。
 - `diagrams/`：图 1、图 2、图 21 的可编辑 SVG 源文件。
+- `attachments/lr_101.zip`：第 3.4 节可直接上传的示例数据包，内容来自演示提交 `1e1f1e33d2ea55feafa89ae22895623179f68cfd` 的 `data/dataset/optimization/lr_101/`，共 11 个文件。
 - `scripts/render-diagrams.mjs`：使用 Playwright 将 SVG 渲染为 PNG。
 
 ## 重新渲染流程图
