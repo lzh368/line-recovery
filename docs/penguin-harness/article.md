@@ -247,41 +247,47 @@ cp -n .env.example .env
 npm start
 ```
 
-在浏览器打开终端显示的本地地址，即可进入应用。详细配置见 [app/README.md](https://github.com/lzh368/line-recovery/tree/1e1f1e33d2ea55feafa89ae22895623179f68cfd/app/README.md)。下面以供电恢复后输送带仍未运行的案例演示，所有设备操作都在本地模拟环境中进行。
+在浏览器打开终端显示的本地地址，即可进入产线恢复助手。详细配置见 [app/README.md](https://github.com/lzh368/line-recovery/tree/1e1f1e33d2ea55feafa89ae22895623179f68cfd/app/README.md)。下图为创空间演示版尚未载入资料时的初始界面。
+
+![图 16：产线恢复助手初始界面。](images/16-app-initial.png)
+
+图 16：产线恢复助手初始界面。
+
+下面以 lr_101 产线资料包为例，演示供电恢复后输送带仍未运行时的分析和恢复过程。所有设备操作都在模拟环境中进行。
 
 打开应用后，左侧是案例列表和“上传资料包”入口，右侧展示当前案例。下图是已载入示例数据包的首页，红框标出了资料上传入口。
 
-![图 16：产线恢复助手首页，红框为资料上传入口。](images/16-16-app-upload-entry.png)
+![图 17：产线恢复助手首页，红框为资料上传入口。](images/16-16-app-upload-entry.png)
 
-图 16：产线恢复助手首页，红框为资料上传入口。
+图 17：产线恢复助手首页，红框为资料上传入口。
 
 本次使用[产线巡检示例数据包（lr_101）](https://github.com/lzh368/line-recovery/tree/1e1f1e33d2ea55feafa89ae22895623179f68cfd/data/dataset/optimization/lr_101)，包含模拟工位的图片、运行记录和日志。下面的截图与结果来自已开发完成应用对该案例的一次运行；line-recovery-starter 自带的示例数据包和“载入 example”按钮对应的是 lr_001。
 
 下载我们准备好的[产线巡检示例数据包（lr_101，ZIP 格式）](https://github.com/lzh368/line-recovery/raw/refs/heads/main/docs/penguin-harness/attachments/lr_101.zip)，在左侧选择该 ZIP 文件，点击“上传并解析”，再从案例列表中选中它。点击右侧“工位图片”页签，可以查看工位和纸箱的分布。
 
-![图 17：查看案例中的工位图片。](images/17-lr_101-03-photo.png)
+![图 18：查看案例中的工位图片。](images/17-lr_101-03-photo.png)
 
-图 17：查看案例中的工位图片。
+图 18：查看案例中的工位图片。
 
 接着切换到“时序数据”页签，查看供电和带速的变化。如下图所示，供电已经恢复，但带速仍为零，产出计数也没有增加。
 
-![图 18：供电已经恢复，但带速仍为零。](images/18-lr_101-02-telemetry.png)
+![图 19：供电已经恢复，但带速仍为零。](images/18-lr_101-02-telemetry.png)
 
-图 18：供电已经恢复，但带速仍为零。
+图 19：供电已经恢复，但带速仍为零。
 
 切换到“诊断与证据”页签，点击“开始诊断”；已有报告时，按钮显示为“重新诊断”。完成后，页面会展示 Agent 的分析结论和对应证据。
 
-![图 19：Agent 的停机分析与对应证据。](images/19-lr_101-04-diagnosis.png)
+![图 20：Agent 的停机分析与对应证据。](images/19-lr_101-04-diagnosis.png)
 
-图 19：Agent 的停机分析与对应证据。
+图 20：Agent 的停机分析与对应证据。
 
 从上图中可以看到，Agent 判断输送带因供电中断而停机。虽然供电已经恢复、驱动已经就绪，但设备没有收到新的运行请求，因此仍未启动。本次停机与温度无关，无需开启风机。
 
 诊断结束后，切换到“动作与反馈”页签，可以查看 Agent 的操作记录：通过 MCP 查询当前设备状态，确认可以启动后恢复输送，再读取带速和产出反馈。
 
-![图 20：恢复输送后，带速和产出计数发生变化。](images/20-lr_101-06-feedback.png)
+![图 21：恢复输送后，带速和产出计数发生变化。](images/20-lr_101-06-feedback.png)
 
-图 20：恢复输送后，带速和产出计数发生变化。
+图 21：恢复输送后，带速和产出计数发生变化。
 
 上图中的执行反馈显示，带速恢复到 0.397 m/s，出口累计计数从 1813 增至 1816，说明模拟输送带已经重新运行，并有新的纸箱通过。应用将这些结果和分析结论一起记录在报告中。
 
@@ -289,17 +295,17 @@ npm start
 
 上一章演示了一个案例的处理过程。接下来，我们让 Penguin Harness 用更多案例评测原版应用，根据发现的问题进行优化。下图展示了从原版应用到优化后应用的过程：
 
-![图 21：Penguin Harness 评测与优化 Agent 应用。](images/21-penguin-optimization-simple.png)
+![图 22：Penguin Harness 评测与优化 Agent 应用。](images/21-penguin-optimization-simple.png)
 
-图 21：Penguin Harness 评测与优化 Agent 应用。
+图 22：Penguin Harness 评测与优化 Agent 应用。
 
 ### 4.1 准备并发起评测与优化任务
 
 在 Penguin Harness 中新建对话，选择上一节已克隆到本地的 [line-recovery 仓库](https://github.com/lzh368/line-recovery/tree/1e1f1e33d2ea55feafa89ae22895623179f68cfd)作为工作区，再点击“使用此目录”，如下图所示。
 
-![图 22：选择 line-recovery 根目录，点击“使用此目录”。](images/22-21-optimization-workspace.png)
+![图 23：选择 line-recovery 根目录，点击“使用此目录”。](images/22-21-optimization-workspace.png)
 
-图 22：选择 line-recovery 根目录，点击“使用此目录”。
+图 23：选择 line-recovery 根目录，点击“使用此目录”。
 
 本次任务使用 [10 份案例](https://github.com/lzh368/line-recovery/tree/1e1f1e33d2ea55feafa89ae22895623179f68cfd/data/dataset/optimization)作为训练集，用于指导优化，另外用 [7 份案例](https://github.com/lzh368/line-recovery/tree/1e1f1e33d2ea55feafa89ae22895623179f68cfd/data/gate-set-7)作为测试集，检查优化后的表现。
 
@@ -307,9 +313,9 @@ npm start
 
 我们选中 agent-evaluation 和 agent-optimization 技能，如下图所示。前者负责组织评测，后者根据评测结果优化 Agent。
 
-![图 23：选中 agent-evaluation 和 agent-optimization，菜单中两项均显示勾选。](images/23-22-optimization-skills.png)
+![图 24：选中 agent-evaluation 和 agent-optimization，菜单中两项均显示勾选。](images/23-22-optimization-skills.png)
 
-图 23：选中 agent-evaluation 和 agent-optimization，菜单中两项均显示勾选。
+图 24：选中 agent-evaluation 和 agent-optimization，菜单中两项均显示勾选。
 
 接下来，将下面的指令填入输入框，让 Penguin Harness 评测初版、根据训练集中的问题修改 Agent，再用测试集检查效果。
 
@@ -317,9 +323,9 @@ npm start
 使用 agent-evaluation 和 agent-optimization，先读 data/dataset/evaluator/README.md 和 data/gate-set-7/README.md。用 example 联调工具与反馈，保存代码和完整 Agent State 为 v1。评测 10 份 optimization 案例和 gate-set-7 七例，封存测试结果。只依据 optimization 结果和 trace 优化一轮；冻结 v2 后复测相同测试，测试材料不用于优化。每例 runs=1，独立设备库和 State，模型、预算及评分规则一致。将版本、报告、工具记录和成绩存入 reports/experiments/ 新目录，不覆盖已有记录，给出前后对比与路径。
 ```
 
-![图 24：填好优化指令后的待发送状态；红框为发送按钮，本次截图未启动任务。](images/24-23-optimization-prompt.png)
+![图 25：填好优化指令后的待发送状态；红框为发送按钮，本次截图未启动任务。](images/24-23-optimization-prompt.png)
 
-图 24：填好优化指令后的待发送状态；红框为发送按钮，本次截图未启动任务。
+图 25：填好优化指令后的待发送状态；红框为发送按钮，本次截图未启动任务。
 
 点击图中红框标出的发送按钮。Penguin Harness 会在对话中展示评测与优化过程，完成后给出报告的保存位置。
 
@@ -329,9 +335,9 @@ npm start
 
 如下图所示，训练集平均分从 69.23 提高到 100.00，七例测试的历史汇总均分从 86.65 提高到 98.57。
 
-![图 25：优化前后成绩。训练集来自 round1；七例测试来自 gate-set-7，先取每例历史运行均分，再对七例求平均，各案例和版本的运行次数不完全相同。](images/25-test-score-comparison.png)
+![图 26：优化前后成绩。训练集来自 round1；七例测试来自 gate-set-7，先取每例历史运行均分，再对七例求平均，各案例和版本的运行次数不完全相同。](images/25-test-score-comparison.png)
 
-图 25：优化前后成绩。训练集来自 round1；七例测试来自 gate-set-7，先取每例历史运行均分，再对七例求平均，各案例和版本的运行次数不完全相同。
+图 26：优化前后成绩。训练集来自 round1；七例测试来自 gate-set-7，先取每例历史运行均分，再对七例求平均，各案例和版本的运行次数不完全相同。
 
 从 [line-recovery 仓库中已保存的报告](https://github.com/lzh368/line-recovery/tree/1e1f1e33d2ea55feafa89ae22895623179f68cfd/reports/experiments)可以看到，在设备状态不明确的案例中，优化后的 Agent 不再贸然请求操作；在过热停机的案例中，它能在降温后继续恢复输送，并确认产出是否恢复。
 
