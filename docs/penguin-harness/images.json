@@ -119,63 +119,71 @@
     },
     {
       "figure": 15,
-      "caption": "图 15：原项目的初始交付说明：应用框架先交付，设备接口随后继续接通。",
+      "caption": "图 15：Penguin Harness 开发过程中读取项目资料。",
+      "path": "images/15-development-process.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "919a021bc9fa991c19bf30274e4e354f45acf3ecdbb7fe5dfd1d35e4eb42b05b"
+    },
+    {
+      "figure": 16,
+      "caption": "图 16：原项目的初始交付说明：应用框架先交付，设备接口随后继续接通。",
       "path": "images/15-initial-delivery-cropped.png",
       "width": 1776,
       "height": 802,
       "sha256": "7c594c5d2d06bedf2c1b15674b5d606345a79cb0df0ef4c9e6b3745d2719ca81"
     },
     {
-      "figure": 16,
-      "caption": "图 16：产线恢复助手初始界面。",
+      "figure": 17,
+      "caption": "图 17：产线恢复助手初始界面。",
       "path": "images/16-app-initial.png",
       "width": 2880,
       "height": 1800,
       "sha256": "825e532286f08dd668e578a4cfe0e7984ce148f5fd61df5f786ab1cd6b1f4fd0"
     },
     {
-      "figure": 17,
-      "caption": "图 17：产线恢复助手首页，红框为资料上传入口。",
+      "figure": 18,
+      "caption": "图 18：产线恢复助手首页，红框为资料上传入口。",
       "path": "images/16-16-app-upload-entry.png",
       "width": 2880,
       "height": 1500,
       "sha256": "e2873a49148c4b8dfe94801aa4cedff4106d097c3afccd6c25f1ad430a8cd384"
     },
     {
-      "figure": 18,
-      "caption": "图 18：查看案例中的工位图片。",
+      "figure": 19,
+      "caption": "图 19：查看案例中的工位图片。",
       "path": "images/17-lr_101-03-photo.png",
       "width": 2880,
       "height": 1500,
       "sha256": "f4e7d8be77183f7d11ff41fe53b251f90b090be08ede413399e40867f04c63e3"
     },
     {
-      "figure": 19,
-      "caption": "图 19：供电已经恢复，但带速仍为零。",
+      "figure": 20,
+      "caption": "图 20：供电已经恢复，但带速仍为零。",
       "path": "images/18-lr_101-02-telemetry.png",
       "width": 2880,
       "height": 1500,
       "sha256": "6499e7509136866fc87d24105bfd87dd4f15bc882dc7153ab6e255ee59f6dbe0"
     },
     {
-      "figure": 20,
-      "caption": "图 20：Agent 的停机分析与对应证据。",
+      "figure": 21,
+      "caption": "图 21：Agent 的停机分析与对应证据。",
       "path": "images/19-lr_101-04-diagnosis.png",
       "width": 2880,
       "height": 1500,
       "sha256": "cec39e065da7a120785aff6aa6626b3bc773f0f9af94a0a654d097afb1e470b9"
     },
     {
-      "figure": 21,
-      "caption": "图 21：恢复输送后，带速和产出计数发生变化。",
+      "figure": 22,
+      "caption": "图 22：恢复输送后，带速和产出计数发生变化。",
       "path": "images/20-lr_101-06-feedback.png",
       "width": 2880,
       "height": 1500,
       "sha256": "1bd072b9c3e036c408e8f8de755ffe00edccad071201507a60f9680da8215d9e"
     },
     {
-      "figure": 22,
-      "caption": "图 22：Penguin Harness 评测与优化 Agent 应用。",
+      "figure": 23,
+      "caption": "图 23：Penguin Harness 评测与优化 Agent 应用。",
       "path": "images/21-penguin-optimization-simple.png",
       "width": 2880,
       "height": 880,
@@ -183,32 +191,32 @@
       "svg": "diagrams/penguin-optimization-simple.svg"
     },
     {
-      "figure": 23,
-      "caption": "图 23：选择 line-recovery 根目录，点击“使用此目录”。",
+      "figure": 24,
+      "caption": "图 24：选择 line-recovery 根目录，点击“使用此目录”。",
       "path": "images/22-21-optimization-workspace.png",
       "width": 2160,
       "height": 1500,
       "sha256": "fce5f238db7fec04ab784c65ce7ffac27207a41ddbc45d06e5aa30f79986660e"
     },
     {
-      "figure": 24,
-      "caption": "图 24：选中 agent-evaluation 和 agent-optimization，菜单中两项均显示勾选。",
+      "figure": 25,
+      "caption": "图 25：选中 agent-evaluation 和 agent-optimization，菜单中两项均显示勾选。",
       "path": "images/23-22-optimization-skills.png",
       "width": 2160,
       "height": 1500,
       "sha256": "e862180fef3d630333309e35385657abe9c2fd84b3cff9bf336d1a9c3f21334d"
     },
     {
-      "figure": 25,
-      "caption": "图 25：填好优化指令后的待发送状态；红框为发送按钮，本次截图未启动任务。",
+      "figure": 26,
+      "caption": "图 26：填好优化指令后的待发送状态；红框为发送按钮，本次截图未启动任务。",
       "path": "images/24-23-optimization-prompt.png",
       "width": 2160,
       "height": 1500,
       "sha256": "502dc737d4da4b01a5cabcecda8b6c957096783c163a05e4b5fde18a3581210d"
     },
     {
-      "figure": 26,
-      "caption": "图 26：优化前后成绩。训练集来自 round1；七例测试来自 gate-set-7，先取每例历史运行均分，再对七例求平均，各案例和版本的运行次数不完全相同。",
+      "figure": 27,
+      "caption": "图 27：优化前后成绩。训练集来自 round1；七例测试来自 gate-set-7，先取每例历史运行均分，再对七例求平均，各案例和版本的运行次数不完全相同。",
       "path": "images/25-test-score-comparison.png",
       "width": 2880,
       "height": 1392,
