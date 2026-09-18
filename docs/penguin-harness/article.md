@@ -382,3 +382,10 @@ Agent 投入使用后，每处理一份案例都会产生相应的模型调用�
 本文以产线恢复助手为例，演示了如何用 Penguin Harness 开发 Agent 和配套网页，并通过评测改善 Agent 的判断和操作表现。
 
 对于其他业务场景，也可以先准备明确的需求、示例数据和工具接口，让 Penguin Harness 完成应用开发，再用实际案例检查效果、逐步改进。
+
+也可以在魔搭创空间体验本文的两个演示：
+
+- [Penguin Harness 演示](https://modelscope.cn/studios/rankyu/line-recovery)：体验用 Penguin Harness 开发 Agent 应用。
+- [产线恢复助手演示](https://modelscope.cn/studios/rankyu/line-recovery-app)：体验已开发完成的 Agent 应用。
+
+请勿在公用的 Penguin Harness 演示空间中输入或保存私人 API Key。如需使用自己的 API Key，请先将空间复制到自己的账号下，设为私有后再配置使用。
