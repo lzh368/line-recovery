@@ -30,4 +30,5 @@
 | 24 | [图 24：选择 line-recovery 根目录，点击“使用此目录”。](images/22-21-optimization-workspace.png) | 2160 × 1500 | - |
 | 25 | [图 25：选中 agent-evaluation 和 agent-optimization，菜单中两项均显示勾选。](images/23-22-optimization-skills.png) | 2160 × 1500 | - |
 | 26 | [图 26：填好优化指令后的待发送状态；红框为发送按钮，本次截图未启动任务。](images/24-23-optimization-prompt.png) | 2160 × 1500 | - |
-| 27 | [图 27：优化前后成绩。训练集来自 round1；七例测试来自 gate-set-7，先取每例历史运行均分，再对七例求平均，各案例和版本的运行次数不完全相同。](images/25-test-score-comparison.png) | 2880 × 1392 | - |
+| 27 | [图 27：评测与优化任务启动后的工具调用记录。](images/27-optimization-process.png) | 2160 × 1500 | - |
+| 28 | [图 28：优化前后成绩。训练集来自 round1；七例测试来自 gate-set-7，先取每例历史运行均分，再对七例求平均，各案例和版本的运行次数不完全相同。](images/25-test-score-comparison.png) | 2880 × 1392 | - |

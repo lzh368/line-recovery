@@ -216,7 +216,15 @@
     },
     {
       "figure": 27,
-      "caption": "图 27：优化前后成绩。训练集来自 round1；七例测试来自 gate-set-7，先取每例历史运行均分，再对七例求平均，各案例和版本的运行次数不完全相同。",
+      "caption": "图 27：评测与优化任务启动后的工具调用记录。",
+      "path": "images/27-optimization-process.png",
+      "width": 2160,
+      "height": 1500,
+      "sha256": "448b8c8c5d714c94ba03ac7caf9f2d671ce5ed65b5e53b08cb65649ddab2e925"
+    },
+    {
+      "figure": 28,
+      "caption": "图 28：优化前后成绩。训练集来自 round1；七例测试来自 gate-set-7，先取每例历史运行均分，再对七例求平均，各案例和版本的运行次数不完全相同。",
       "path": "images/25-test-score-comparison.png",
       "width": 2880,
       "height": 1392,
